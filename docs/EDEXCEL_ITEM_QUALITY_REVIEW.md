@@ -45,7 +45,7 @@ Each item was reviewed against four gates:
 | Q-016 | transfer | 2.7C/2.7A | Strong | Keep active | Consecutive integer model is a good expression-building task. |
 | Q-017 | transfer | 2.7C/2.7A | Moderate | Keep active | Uses triangle area plus quadratic; good transfer, slightly higher load. |
 | Q-018 | transfer | 3.3/2.7A | Strong | Keep active | Factorised form to roots/intercepts supports graph/algebra transfer. |
-| Q-019 | transfer | 3.3 | Later | Keep as Stretch | Sketching from completed-square form is useful but should follow graph features. |
+| Q-019 | stretch | 3.3 | Later | Keep as Stretch | Sketching from completed-square form is useful but should follow graph features. |
 | Q-020 | stretch | 2.7C/3.3 | Later | Keep as Stretch | Contextual maximum-height item is valid but high-load. |
 
 ## 4. Repair Items
