@@ -48,7 +48,7 @@
     {
       "code": "Q015_NEGATIVE_CONTEXT_ROOT",
       "category": "checking_finalization_error",
-      "trigger": "x = -12",
+      "trigger": "x = -11",
       "expected_step_number": 4,
       "diagnostic_target": "contextual_root_choice",
       "diagnostic_sentence": "The negative root does not make sense for this length context. Use the positive value of x.",
