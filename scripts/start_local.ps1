@@ -11,7 +11,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$Root = Resolve-Path (Join-Path $PSScriptRoot "..")
+$Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $FrontendRoot = Join-Path $Root "frontend"
 $TmpDir = Join-Path $Root ".tmp"
 $DistDir = Join-Path $FrontendRoot "dist"

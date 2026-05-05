@@ -4,8 +4,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$Root = Resolve-Path (Join-Path $PSScriptRoot "..")
-$ShortcutDirectory = Resolve-Path $ShortcutDirectory
+$Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$ShortcutDirectory = (Resolve-Path $ShortcutDirectory).Path
 $PowerShell = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
 $WScriptShell = New-Object -ComObject WScript.Shell
 
