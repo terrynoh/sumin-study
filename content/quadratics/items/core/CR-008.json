@@ -1,0 +1,98 @@
+{
+  "id": "CR-008",
+  "title": "Variables and expressions: distinguish expression and equation",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-007",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-001 Q001_WRONG_FINAL_FORM. Atomicity=alg.variables_expressions; Scenario=Called by Q-001 Q001_WRONG_FINAL_FORM; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Which one can be solved for x: x^2 + 5x + 6 or x^2 + 5x + 6 = 0?",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x^2 + 5x + 6 = 0",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.variables_expressions"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks",
+    "exam.required_form",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "num.integer_arithmetic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR008_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x^2 + 5x + 6",
+      "expected_step_number": 1,
+      "diagnostic_target": "expression_vs_equation",
+      "diagnostic_sentence": "If the expression without '= 0' is chosen, the issue is confusing a form to factorise with an equation to solve. IGCSE solve commands require an equation.",
+      "repair_node_ids": [
+        "alg.variables_expressions"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Equation test",
+      "prompt": "You can solve only when there is an equals sign. An expression can be simplified or factorised, but not solved by itself."
+    },
+    {
+      "level": 2,
+      "title": "Look for equals",
+      "prompt": "Compare the two options and find the one that states something is equal to zero."
+    },
+    {
+      "level": 3,
+      "title": "Command mismatch",
+      "prompt": "A common slip is trying to solve a bare expression because it looks like a quadratic. Solving needs an equation."
+    },
+    {
+      "level": 4,
+      "title": "Expression/equation routine",
+      "prompt": "Before solving, check for an equals sign and a target value. Choose the valid equation here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "expression_vs_equation",
+      "expression": "x^2 + 5x + 6 = 0",
+      "diagnostic_target": "expression_vs_equation",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on distinguishing a quadratic expression from a quadratic equation before deciding what operation is allowed."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.variables_expressions. Scenario: Called by Q-001 Q001_WRONG_FINAL_FORM. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak expression vs equation control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

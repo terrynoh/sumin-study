@@ -1,0 +1,97 @@
+{
+  "id": "CR-023",
+  "title": "Expand two brackets: positive constants",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what structure are you expanding?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "ACADEMIC-FILTER-CR-additions",
+    "notes": "Called by Q-003 Q003_MIDDLE_TERM_MISSING. Atomicity=alg.expand_double_brackets; Scenario=Called by Q-003 Q003_MIDDLE_TERM_MISSING; Surface variation=yes; No new vocab=yes; Steps=1-2. Added after academic validation."
+  },
+  "problem_text": "Expand (x + 2)(x + 5).",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x^2 + 7x + 10",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "expanded_form",
+  "concept_ids": [
+    "alg.expand_double_brackets"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.expand_single_bracket",
+    "alg.collect_like_terms"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR023_MIDDLE_PRODUCT",
+      "category": "checking_finalization_error",
+      "trigger": "x^2 + 10",
+      "expected_step_number": 1,
+      "diagnostic_target": "double_bracket_middle_terms",
+      "diagnostic_sentence": "If only the first and last products appear, the next link is tracking the two middle products before collecting terms.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Four products",
+      "prompt": "Each term in the first bracket multiplies each term in the second bracket."
+    },
+    {
+      "level": 2,
+      "title": "Track middle terms",
+      "prompt": "Write the first product, the two middle products, and the last product before collecting like terms."
+    },
+    {
+      "level": 3,
+      "title": "Middle-link check",
+      "prompt": "The two products involving one x and one number combine to make the x term."
+    },
+    {
+      "level": 4,
+      "title": "Expansion routine",
+      "prompt": "Use a four-product expansion, then collect the two x terms. Apply the routine to this expression."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "expand two brackets",
+      "expression": "x^2 + 5x + 2x + 10 = x^2 + 7x + 10",
+      "diagnostic_target": "double_bracket_middle_terms",
+      "common_errors": [
+        "x^2 + 10",
+        "only multiplies first and last terms"
+      ],
+      "diagnostic_sentence": "This repair focuses on writing both middle products before collecting the x terms."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.expand_double_brackets. Scenario: Called by Q-003 Q003_MIDDLE_TERM_MISSING. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational pattern: missing one or both middle products when checking factorised brackets.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "Q-005",
+  "title": "Solve a monic quadratic equation by factorising",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch1-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Solve x^2 - 8x + 15 = 0.",
+  "student_prompt": "Show your working and give both values of x.",
+  "expected_answer": "x = 3 or x = 5",
+  "marks": 3,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.solve_by_factorising",
+    "quad.factorise_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_solve",
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.factorise_monic",
+    "alg.linear_equations",
+    "num.negative_numbers",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q005_FACTOR_SIGNS",
+      "category": "sign_error",
+      "trigger": "x + 3",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_factor_pair",
+      "diagnostic_sentence": "The numbers 3 and 5 are right, but both factors must be negative because they add to -8 and multiply to +15.",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.factorise_monic"
+      ]
+    },
+    {
+      "code": "Q005_STOPS_AT_FACTORS",
+      "category": "checking_finalization_error",
+      "trigger": "(x - 3)(x - 5)",
+      "expected_step_number": 2,
+      "diagnostic_target": "solve_after_factorising",
+      "diagnostic_sentence": "You factorised correctly, but the command word is 'Solve'. After factorising, set each bracket equal to zero.",
+      "repair_node_ids": [
+        "exam.command_solve",
+        "quad.solve_by_factorising"
+      ]
+    },
+    {
+      "code": "Q005_WRONG_ROOT_SIGNS",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = -3",
+      "expected_step_number": 3,
+      "diagnostic_target": "zero_product_property",
+      "diagnostic_sentence": "If x - 3 = 0, then x = 3. The sign changes when you solve the linear equation.",
+      "repair_node_ids": [
+        "quad.solve_by_factorising",
+        "alg.linear_equations"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does Solve ask for?",
+      "prompt": "This is an equation set to zero. Think about what kind of values of x would make a product equal to zero. What is the connection between factorising and solving?"
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Try to rewrite the left side as a product of two brackets. The structure x^2 + (sum)x + (product) tells you what the brackets need to do."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "When the middle term is negative but the constant is positive, both factors carry the same sign. Check both conditions: product and sum."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For any x^2 + bx + c = 0 where you can factor it, rewrite as (x + p)(x + q) = 0, then use the zero-product principle to get x = -p or x = -q. Apply this pattern to your equation; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "factorise the quadratic equation",
+      "expression": "x^2 - 8x + 15 = (x - 3)(x - 5)",
+      "diagnostic_target": "negative_factor_pair",
+      "common_errors": [
+        "uses +3 and +5",
+        "chooses correct numbers but wrong signs"
+      ],
+      "diagnostic_sentence": "The stuck point is choosing the signed factor pair before solving."
+    },
+    {
+      "step_number": 2,
+      "action": "set each bracket equal to zero",
+      "expression": "x - 3 = 0 or x - 5 = 0",
+      "diagnostic_target": "solve_after_factorising",
+      "common_errors": [
+        "stops at the factorised form",
+        "does not use the zero-product property"
+      ],
+      "diagnostic_sentence": "The stuck point is moving from factorising to solving."
+    },
+    {
+      "step_number": 3,
+      "action": "solve the two linear equations",
+      "expression": "x = 3 or x = 5",
+      "diagnostic_target": "zero_product_property",
+      "common_errors": [
+        "writes x = -3 or x = -5",
+        "gives only one value of x"
+      ],
+      "diagnostic_sentence": "The stuck point is solving each bracket equation and giving both values."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award 1 mark for correct factorisation, 1 mark for setting brackets equal to zero or equivalent method, 1 mark for both correct roots.",
+  "examiner_report_notes": "Common errors expected: stopping after factorising, sign reversal in roots, giving one root only.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, how is solving different from just factorising?",
+  "transfer_variation_of": "Q-001",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7A",
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "sign_change",
+    "method_choice"
+  ]
+}

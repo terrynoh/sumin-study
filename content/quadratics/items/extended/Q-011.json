@@ -1,0 +1,141 @@
+{
+  "id": "Q-011",
+  "title": "Use completed-square form to identify a turning point",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "The function is y = x^2 - 6x + 8. Write it in completed-square form and state the coordinates of the turning point.",
+  "student_prompt": "Show the completed-square form, then give the turning point.",
+  "expected_answer": "y = (x - 3)^2 - 1; turning point (3, -1)",
+  "marks": 4,
+  "difficulty": 4,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "completed_square_form",
+  "concept_ids": [
+    "quad.completing_square",
+    "graph.turning_point_symmetry"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.completing_square",
+    "graph.quadratic_shape",
+    "coord.cartesian_coordinates",
+    "num.negative_numbers"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q011_TURNING_POINT_SIGN",
+      "category": "conceptual_misunderstanding",
+      "trigger": "(-3, -1)",
+      "expected_step_number": 3,
+      "diagnostic_target": "turning_point_from_completed_square",
+      "diagnostic_sentence": "In y = (x - 3)^2 - 1, the turning point is (3, -1). The x-coordinate has the opposite sign from the bracket.",
+      "repair_node_ids": [
+        "graph.turning_point_symmetry",
+        "quad.completing_square"
+      ]
+    },
+    {
+      "code": "Q011_COMPLETING_SQUARE_ADJUST",
+      "category": "calculation_error",
+      "trigger": "(x - 3)^2 + 1",
+      "expected_step_number": 2,
+      "diagnostic_target": "constant_adjustment",
+      "diagnostic_sentence": "(x - 3)^2 gives x^2 - 6x + 9, so the outside value must be -1 to make +8.",
+      "repair_node_ids": [
+        "quad.completing_square",
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What information does completed-square form give?",
+      "prompt": "Completed-square form lets you read the turning point of a quadratic graph. Think about the bracket value that makes the square smallest."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "First rewrite the expression in completed-square form, then read the coordinates from that structure."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students reverse the sign of the x-coordinate incorrectly. Remember that the bracket becomes zero at the turning point."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For y = (x - h)^2 + k, the turning point is (h, k). If you start from expanded form, complete the square first. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "form the square",
+      "expression": "(x - 3)^2",
+      "diagnostic_target": "negative_middle_coefficient",
+      "common_errors": [
+        "uses (x + 3)^2",
+        "uses -6 in the bracket"
+      ],
+      "diagnostic_sentence": "The stuck point is forming the correct square."
+    },
+    {
+      "step_number": 2,
+      "action": "adjust the constant",
+      "expression": "y = (x - 3)^2 - 1",
+      "diagnostic_target": "constant_adjustment",
+      "common_errors": [
+        "writes +1",
+        "does not adjust from 9 to 8"
+      ],
+      "diagnostic_sentence": "The stuck point is adjusting the constant after completing the square."
+    },
+    {
+      "step_number": 3,
+      "action": "read the turning point",
+      "expression": "(3, -1)",
+      "diagnostic_target": "turning_point_from_completed_square",
+      "common_errors": [
+        "writes (-3, -1)",
+        "writes (3, 1)"
+      ],
+      "diagnostic_sentence": "The stuck point is reading the turning point from completed-square form."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for completed-square form and correct turning point.",
+  "examiner_report_notes": "Likely errors: wrong x-coordinate sign and constant adjustment errors.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what does completed-square form tell you about a graph?",
+  "transfer_variation_of": "Q-009",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4D",
+    "2.7B",
+    "3.3"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "sign_change",
+    "representation_change",
+    "method_choice"
+  ]
+}

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local runtime data
+data/local/*.sqlite
+data/local/*.sqlite-*
+data/local/*.db
+data/local/*.db-*
+.tmp/
+*.log
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.vite-temp/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local references and PDFs
+references/
+*.pdf
+
+# Agent session logs: keep only the compact next-session handoff in git
+_agents/*
+!_agents/NEXT_SESSION_HANDOFF.md
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.tmp

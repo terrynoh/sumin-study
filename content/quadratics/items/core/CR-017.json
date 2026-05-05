@@ -1,0 +1,97 @@
+{
+  "id": "CR-017",
+  "title": "Expand single bracket: positive multiplier",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-002 Q002_DROPS_NEGATIVE. Atomicity=alg.expand_single_bracket; Scenario=Called by Q-002 Q002_DROPS_NEGATIVE; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Expand 3(x + 4).",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "3x + 12",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.expand_single_bracket"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "alg.expand_double_brackets"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR017_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "3x + 4",
+      "expected_step_number": 1,
+      "diagnostic_target": "single_bracket_distribution",
+      "diagnostic_sentence": "If the constant is not multiplied, the issue is incomplete distribution across a bracket. Double-bracket expansion relies on this single-bracket habit first.",
+      "repair_node_ids": [
+        "alg.expand_single_bracket"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Distribute 3",
+      "prompt": "Expanding 3(x + 4) means multiply both terms inside the bracket by 3."
+    },
+    {
+      "level": 2,
+      "title": "Two multiplications",
+      "prompt": "Calculate 3 times x, then 3 times 4. Both parts must be included."
+    },
+    {
+      "level": 3,
+      "title": "Missed constant",
+      "prompt": "The step to check is whether the outside 3 reaches both terms. It must multiply the constant as well as the x term."
+    },
+    {
+      "level": 4,
+      "title": "Distribution routine",
+      "prompt": "Multiply the outside number by each term inside the bracket, then write the two results. Use this bracket; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "single_bracket_distribution",
+      "expression": "3x + 12",
+      "diagnostic_target": "single_bracket_distribution",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on multiplying the outside number by every term in the bracket, including the constant."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.expand_single_bracket. Scenario: Called by Q-002 Q002_DROPS_NEGATIVE. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak single bracket distribution control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "CR-012",
+  "title": "Substitution: negative value in expression",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-011",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-012 Q012_WRONG_COEFFICIENTS. Atomicity=alg.substitution; Scenario=Called by Q-012 Q012_WRONG_COEFFICIENTS; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Substitute x = -2 into 3x + 5.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "-1",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.substitution"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "num.negative_numbers",
+    "quad.quadratic_formula",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR012_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "11",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_substitution",
+      "diagnostic_sentence": "If 3(-2) becomes +6, the problem is sign control during substitution. Quadratic formula and table-value work both need negative inputs handled accurately.",
+      "repair_node_ids": [
+        "alg.substitution"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Negative input",
+      "prompt": "Substitute x = -2 carefully: the negative sign is part of the value being multiplied by 3."
+    },
+    {
+      "level": 2,
+      "title": "Multiply first",
+      "prompt": "Calculate 3(-2) before adding 5."
+    },
+    {
+      "level": 3,
+      "title": "Sign after multiply",
+      "prompt": "The sign to check is 3(-2). Positive times negative must stay negative before the +5 is added."
+    },
+    {
+      "level": 4,
+      "title": "Negative substitution routine",
+      "prompt": "Put the negative value in brackets, multiply first, then add or subtract. Use this expression; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "negative_substitution",
+      "expression": "-1",
+      "diagnostic_target": "negative_substitution",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on multiplying by a negative substituted value before adding the constant."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.substitution. Scenario: Called by Q-012 Q012_WRONG_COEFFICIENTS. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak negative substitution control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

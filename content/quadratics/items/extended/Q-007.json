@@ -1,0 +1,126 @@
+{
+  "id": "Q-007",
+  "title": "Factorise a non-monic quadratic with a negative constant",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise 3x^2 + 5x - 2.",
+  "student_prompt": "Show your working and give your answer in factorised form.",
+  "expected_answer": "(3x - 1)(x + 2)",
+  "marks": 3,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "factorised_form",
+  "concept_ids": [
+    "quad.factorise_non_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.factorise_monic",
+    "num.negative_numbers",
+    "alg.expand_double_brackets",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q007_SIGN_PLACEMENT",
+      "category": "sign_error",
+      "trigger": "3x + 1",
+      "expected_step_number": 2,
+      "diagnostic_target": "sign_placement",
+      "diagnostic_sentence": "The signs are placed incorrectly. The constant is negative, so the bracket signs must be different.",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.factorise_non_monic"
+      ]
+    },
+    {
+      "code": "Q007_MIDDLE_TERM_WRONG",
+      "category": "checking_finalization_error",
+      "trigger": "3x^2 - 5x - 2",
+      "expected_step_number": 2,
+      "diagnostic_target": "expansion_check",
+      "diagnostic_sentence": "Your brackets make -5x instead of +5x. Expand to check the middle term.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets",
+        "alg.collect_like_terms"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does the negative constant imply?",
+      "prompt": "A negative constant in a non-monic quadratic means the bracket constants have opposite signs. The position of those signs affects the middle term."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Choose first terms that multiply to the leading term, then test opposite-signed constants by expanding the cross-products."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "The signs may be opposite but still need the correct bracket positions, or the middle term flips direction."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For non-monic quadratics, expansion checking is the safest guide: first terms make ax^2, constants make c, and cross-products must combine to bx. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "set up non-monic bracket structure",
+      "expression": "(3x ? ?)(x ? ?)",
+      "diagnostic_target": "non_monic_structure",
+      "common_errors": [
+        "ignores the coefficient 3",
+        "uses x in both first positions"
+      ],
+      "diagnostic_sentence": "The stuck point is building the correct bracket structure."
+    },
+    {
+      "step_number": 2,
+      "action": "place constants and signs",
+      "expression": "(3x - 1)(x + 2)",
+      "diagnostic_target": "sign_placement",
+      "common_errors": [
+        "reverses both signs",
+        "gets the middle term -5x"
+      ],
+      "diagnostic_sentence": "The stuck point is sign placement in a non-monic factorisation."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award method credit for suitable brackets and full credit for (3x - 1)(x + 2).",
+  "examiner_report_notes": "Likely errors: sign reversal and insufficient expansion check.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, how will you check the signs in your brackets?",
+  "transfer_variation_of": "Q-006",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "sign_change",
+    "method_choice"
+  ]
+}

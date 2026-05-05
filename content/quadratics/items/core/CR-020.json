@@ -1,0 +1,98 @@
+{
+  "id": "CR-020",
+  "title": "Common factor factorising: quadratic terms",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-019",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT. Atomicity=alg.common_factor_factorising; Scenario=Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise 4x^2 + 8x.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "4x(x + 2)",
+  "marks": 2,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.common_factor_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "num.integer_arithmetic",
+    "quad.factorise_non_monic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR020_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "4(x^2 + 2x)",
+      "expected_step_number": 1,
+      "diagnostic_target": "common_factor_quadratic",
+      "diagnostic_sentence": "If only 4 is taken out, the issue is missing the shared x factor. Quadratic common-factor work depends on recognising both numerical and variable factors.",
+      "repair_node_ids": [
+        "alg.common_factor_factorising"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Shared factor",
+      "prompt": "Both terms share 4x, not just 4. Look for the number factor and the x factor."
+    },
+    {
+      "level": 2,
+      "title": "Divide terms",
+      "prompt": "Divide 4x^2 by 4x, then divide 8x by 4x."
+    },
+    {
+      "level": 3,
+      "title": "Missing x factor",
+      "prompt": "A common slip is taking out only 4 and leaving an extra x pattern harder than necessary."
+    },
+    {
+      "level": 4,
+      "title": "Quadratic factor routine",
+      "prompt": "Find the greatest shared number and variable factor, divide each term, then check by expanding. Apply it here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "common_factor_quadratic",
+      "expression": "4x(x + 2)",
+      "diagnostic_target": "common_factor_quadratic",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on identifying 4x as the full common factor and dividing both terms by it."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.common_factor_factorising. Scenario: Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak common factor quadratic control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

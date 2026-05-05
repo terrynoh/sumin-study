@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SUMIN STUDY — v1 Screen Mockups</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+<style>
+  :root {
+    --bg: #F9F9F7;
+    --text: #1A1A1A;
+    --teal: #3D7A6E;
+    --amber: #C08A3A;
+    --border: #E0E0DC;
+    --muted: #6B6B66;
+    --card-bg: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #EDEDE8;
+    color: var(--text);
+    font-family: -apple-system, "Inter", "Noto Sans KR", "Noto Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 32px 24px;
+  }
+  .page-header {
+    max-width: 1100px;
+    margin: 0 auto 32px;
+  }
+  .page-header h1 {
+    margin: 0 0 4px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .page-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .screen-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .screen {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+  .screen-label {
+    background: #2A2A2A;
+    color: #F0F0EC;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .screen-label .ref {
+    color: #888;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 11px;
+  }
+  .screen-body {
+    padding: 0;
+    min-height: 420px;
+  }
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  .topbar .brand {
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+  .topbar .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 13px;
+  }
+  .content {
+    padding: 28px 32px;
+  }
+  .section-title {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  .h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+  .h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 24px 0 8px;
+  }
+  .task-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .task-card.locked {
+    background: #F4F4F0;
+    color: var(--muted);
+  }
+  .task-card .task-text {
+    flex: 1;
+  }
+  .task-card .task-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .task-card .task-reason {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .btn {
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-amber {
+    background: var(--amber);
+    color: #fff;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    border: none;
+  }
+  .mastery-block {
+    border-top: 1px solid var(--border);
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  .vector-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 110px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar > span {
+    display: block;
+    height: 100%;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+  .state {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: right;
+  }
+  .state.ready { color: var(--teal); font-weight: 600; }
+  .state.developing { color: var(--amber); font-weight: 500; }
+  .state.notchecked { color: var(--muted); }
+
+  .problem-display {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 22px;
+  }
+  .breadcrumb {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .meta-prompt {
+    background: #FAF6EC;
+    border-left: 3px solid var(--amber);
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    border-radius: 0 3px 3px 0;
+  }
+  .meta-prompt label {
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .step-list {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .step-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .step-row .step-num {
+    color: var(--muted);
+    font-size: 12px;
+    min-width: 50px;
+  }
+  .step-input {
+    flex: 1;
+    border: 1px solid var(--border);
+    background: #FAFAF8;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 13px;
+  }
+  .step-input.filled { background: #fff; color: var(--text); }
+  .answer-row {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .answer-row label {
+    font-size: 12px;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .answer-row input {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    border-radius: 3px;
+    background: #fff;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 14px;
+  }
+  .action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .hint-strip {
+    border-top: 1px solid var(--border);
+    padding: 14px 20px;
+    background: #FBFBF8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .repair-banner {
+    background: #FAF1DD;
+    border: 1px solid #E5C58A;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+  .repair-banner .label {
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .repair-frame {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  .stuck-callout {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    padding: 14px 18px;
+    margin-top: 18px;
+    border-radius: 0 3px 3px 0;
+  }
+  .stuck-callout .what {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .stuck-callout .sentence {
+    font-size: 14px;
+  }
+  .stuck-callout .where {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .parent-section {
+    margin-bottom: 22px;
+  }
+  .parent-section .section-label {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .parent-section.developing .section-label {
+    color: var(--amber);
+  }
+  .parent-section .body {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .parent-no-action {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .parent-actions {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+  }
+
+  .op-banner {
+    background: #2A2A2A;
+    color: #F0E0B8;
+    padding: 8px 24px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .op-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+  }
+  .op-tabs .tab {
+    padding: 10px 18px;
+    font-size: 13px;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  .op-tabs .tab.active {
+    color: var(--text);
+    border-bottom-color: var(--teal);
+    font-weight: 600;
+  }
+  .op-stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .op-stat {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px;
+  }
+  .op-stat .num {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .op-stat .lbl {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .op-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .op-table th, .op-table td {
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .op-table th {
+    background: #F4F4F0;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .op-table tr:last-child td { border-bottom: none; }
+  .gate-ok { color: var(--teal); }
+  .gate-warn { color: var(--amber); font-size: 12px; }
+  .unmatched-card {
+    background: #FBFBF8;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 13px;
+  }
+  .unmatched-card .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .unmatched-card .header .id {
+    font-weight: 600;
+  }
+  .unmatched-card .steps {
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 3px;
+    color: var(--text);
+  }
+
+  .session-summary {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+  }
+  .session-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0;
+  }
+  .session-summary li {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+  .session-summary li::before {
+    content: "•";
+    color: var(--teal);
+    margin-right: 10px;
+  }
+
+  .progress-window {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .error-pattern {
+    margin-top: 24px;
+  }
+  .error-bar-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .error-bar {
+    height: 10px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .error-bar > span {
+    display: block;
+    height: 100%;
+    background: var(--amber);
+  }
+  .where-break {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: 13.5px;
+    border-radius: 0 3px 3px 0;
+  }
+  .where-break .occurrence {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .footer-note {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>SUMIN STUDY — v1 Screen Mockups</h1>
+  <p>Based on DESIGN_BRIEF v1.5 §4. Visual reference for frontend implementation. Single-student local desktop app, 1024×768 minimum.</p>
+</div>
+
+<div class="screen-grid">
+
+<!-- ============ STUDENT DASHBOARD ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>STUDENT · Dashboard</span>
+    <span class="ref">DESIGN_BRIEF §4.1</span>
+  </div>
+  <div class="screen-body">
+    <div class="topbar">
+      <div class="brand">SUMIN STUDY</div>
+      <div class="nav">
+        <a href="#">Progress</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="section-title">Today's Session — 3 May 2026</div>
+
+      <div class="task-card">
+        <div class="task-text">
+          <div class="task-title">CORE · Factorising quadratics</div>
+          <div class="task-reason">You got this wrong last time. Sign errors in negative coefficients.</div>
+        </div>
+        <button class="btn">Start →</button>
+      </div>
+
+      <div class="task-card">
+        <div class="task-text">
+          <div class="task-title">REVIEW · 2 concepts due for retention check</div>
+          <div class="task-reason">Last seen 5 days ago. ~4 minutes total.</div>
+        </div>
+        <button class="btn btn-secondary">Review →</button>
+      </div>
+
+      <div class="task-card locked">
+        <div class="task-text">
+          <div class="task-title">🔒 EXPLORE</div>
+          <div class="task-reason">Unlocks after today's Core.</div>
+        </div>
+      </div>
+
+      <div class="mastery-block">
+        <div class="section-title">Mastery — Factorising quadratics</div>
+        <div class="vector-row">
+          <span>Accuracy</span>
+          <div class="bar"><span style="width:80%"></span></div>
+          <span class="state ready">ready</span>
+        </div>
+        <div class="vector-row">
+          <span>Hint independence</span>
+          <div class="bar"><span style="width:40%"></span></div>
+          <span class="state developing">developing</span>
+        </div>
+        <div class="vector-row">
+          <span>Retention</span>
+          <div class="bar"></div>
+          <span class="state notchecked">not checked yet</span>
+        </div>
+        <div class="vector-row">
+          <span>Transfer</span>
+          <div class="bar"><span style="width:30%"></span></div>
+          <span class="state developing">needs 1 more</span>
+        </div>
+        <div class="vector-row">
+          <span>Articulation</span>
+          <div class="bar"><span style="width:100%"></span></div>
+          <span class="state ready">ready</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM SCREEN ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>STUDENT · Problem Solving</span>
+    <span class="ref">DESIGN_BRIEF §4.2</span>
+  </div>
+  <div class="screen-body">
+    <div class="topbar">
+      <div>
+        <span style="color: var(--muted); font-size: 13px;">← Back</span>
+        <span style="margin-left: 18px; font-weight: 600;">Factorising quadratics</span>
+      </div>
+      <div style="color: var(--muted); font-size: 13px;">Core · Q2 of 3</div>
+    </div>
+    <div class="content">
+      <div class="section-title">Problem</div>
+      <div class="problem-display">Factorise: \( x^2 + 5x + 6 \)</div>
+
+      <div class="meta-prompt">
+        <label>Before you start (every 3rd problem):</label>
+        What method will you use?
+        <input type="text" style="width: 100%; border: 1px solid var(--border); padding: 6px 10px; margin-top: 6px; border-radius: 3px; font-size: 13px;" placeholder="e.g. find two numbers that multiply to 6 and add to 5">
+      </div>
+
+      <div class="section-title">Your work</div>
+      <div class="step-list">
+        <div class="step-row">
+          <span class="step-num">Step 1</span>
+          <input class="step-input filled" value="Find two numbers: product 6, sum 5" readonly>
+        </div>
+        <div class="step-row">
+          <span class="step-num">Step 2</span>
+          <input class="step-input filled" value="2 × 3 = 6, 2 + 3 = 5" readonly>
+        </div>
+        <div class="step-row">
+          <span class="step-num">Step 3</span>
+          <input class="step-input" placeholder="Add another step…">
+        </div>
+        <div style="margin-top: 6px;"><button class="btn-ghost">+ Add step</button></div>
+
+        <div class="answer-row">
+          <label>Final answer</label>
+          <input value="(x + 2)(x + 3)">
+        </div>
+      </div>
+
+      <div class="action-row">
+        <div></div>
+        <button class="btn">Check answer →</button>
+      </div>
+    </div>
+
+    <div class="hint-strip">
+      <span>💡 Hint · Level: none used · Using a hint is fine.</span>
+      <span>[ 한국어 설명 보기 ▾ ]</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REPAIR SCREEN ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>STUDENT · Repair (auto-routed when stuck)</span>
+    <span class="ref">DESIGN_BRIEF §4.4</span>
+  </div>
+  <div class="screen-body">
+    <div class="topbar">
+      <div>
+        <span style="color: var(--amber); font-size: 13px; font-weight: 600;">Going back to fix something</span>
+        <span style="margin-left: 14px; color: var(--muted); font-size: 12px;">Repair · depth 1 of 3</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="repair-banner">
+        <div class="label">You got stuck on</div>
+        <div>Factorising \( x^2 - 5x + 6 \)</div>
+        <div class="repair-frame">The issue looks like: sign with negatives.</div>
+      </div>
+
+      <div class="section-title">Let's fix the building block first</div>
+      <div class="problem-display" style="font-size: 24px;">What is \( (-2) \times (-3) \) ?</div>
+
+      <div class="step-list">
+        <div class="answer-row" style="border-top: none; padding-top: 0;">
+          <label>Your answer</label>
+          <input placeholder="">
+        </div>
+      </div>
+
+      <div class="action-row">
+        <div style="color: var(--muted); font-size: 13px;">After this, we'll go back to the original.</div>
+        <button class="btn">Submit</button>
+      </div>
+
+      <div class="stuck-callout" style="margin-top: 28px; border-left-color: var(--teal);">
+        <div class="what">When detected from previous attempt:</div>
+        <div class="sentence">"You got the setup right but the sign changed when you multiplied (-2) × (-3)."</div>
+        <div class="where">Stuck-point sentence (v1 template, v2 LLM)</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ WEAKNESS REPORT ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>STUDENT · Progress / Weakness Report</span>
+    <span class="ref">DESIGN_BRIEF §4.8</span>
+  </div>
+  <div class="screen-body">
+    <div class="topbar">
+      <div style="font-weight: 600;">My Progress</div>
+      <div style="color: var(--muted); font-size: 13px;">This week ▾</div>
+    </div>
+    <div class="content">
+
+      <div class="section-title">Quadratics — Factorising (simple)</div>
+
+      <div class="vector-row">
+        <span>Accuracy</span>
+        <div class="bar"><span style="width:90%"></span></div>
+        <span class="state ready">ready</span>
+      </div>
+      <div class="vector-row">
+        <span>Hint indep.</span>
+        <div class="bar"><span style="width:40%"></span></div>
+        <span class="state developing">developing</span>
+      </div>
+      <div class="vector-row">
+        <span>Retention</span>
+        <div class="bar"></div>
+        <span class="state notchecked">not checked yet</span>
+      </div>
+      <div class="vector-row">
+        <span>Transfer</span>
+        <div class="bar"><span style="width:30%"></span></div>
+        <span class="state developing">developing</span>
+      </div>
+      <div class="vector-row">
+        <span>Articulation</span>
+        <div class="bar"><span style="width:100%"></span></div>
+        <span class="state ready">ready</span>
+      </div>
+
+      <div class="h3">Where you break down</div>
+      <div class="where-break">
+        Sign errors when expanding brackets with negative coefficients.
+        <div class="occurrence">Appeared in 4 of your last 6 attempts on this concept.</div>
+      </div>
+
+      <div class="error-pattern">
+        <div class="section-title">Error pattern · rolling 14 days</div>
+        <div class="error-bar-row">
+          <span>Sign error</span>
+          <div class="error-bar"><span style="width:80%"></span></div>
+        </div>
+        <div class="error-bar-row">
+          <span>Problem interpret.</span>
+          <div class="error-bar"><span style="width:40%"></span></div>
+        </div>
+        <div class="error-bar-row">
+          <span>Calculation</span>
+          <div class="error-bar"><span style="width:20%"></span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ PARENT WEEKLY SUMMARY ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>PARENT · Weekly Summary (terry view, before send)</span>
+    <span class="ref">DESIGN_BRIEF §4.9 / §17</span>
+  </div>
+  <div class="screen-body">
+    <div class="topbar">
+      <div style="font-weight: 600;">Weekly Summary — Week of 28 April</div>
+      <div style="color: var(--muted); font-size: 12px;">For: Terry (Parent view) · Draft</div>
+    </div>
+    <div class="content">
+
+      <div style="font-size: 14.5px; margin-bottom: 22px;">
+        This week Sumin worked on <strong>factorising quadratics</strong>.
+      </div>
+
+      <div class="parent-section">
+        <div class="section-label">Improving</div>
+        <div class="body">She can now factorise simple quadratics without hints in most attempts.</div>
+      </div>
+
+      <div class="parent-section developing">
+        <div class="section-label">Still developing</div>
+        <div class="body">Confidence drops when negative numbers appear inside brackets. Specific and fixable, not a general weakness.</div>
+      </div>
+
+      <div class="parent-section">
+        <div class="section-label">One thing that would help</div>
+        <div class="body">A five-minute review of multiplying negative numbers together before her next session would likely reduce this error significantly.</div>
+      </div>
+
+      <div class="parent-no-action">No action needed beyond that this week.</div>
+
+      <div class="parent-actions">
+        <button class="btn btn-secondary">Edit draft</button>
+        <button class="btn">Mark as sent</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ OPERATOR DASHBOARD ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>OPERATOR · Dashboard (terry only)</span>
+    <span class="ref">DESIGN_BRIEF §4.10 / §10</span>
+  </div>
+  <div class="screen-body">
+
+    <div class="op-banner">⚠️ Operator mode. This is not the parent view.</div>
+
+    <div class="op-tabs">
+      <div class="tab active">System</div>
+      <div class="tab">Items</div>
+      <div class="tab">Student</div>
+      <div class="tab">Log</div>
+    </div>
+
+    <div class="content">
+      <div class="op-stat-row">
+        <div class="op-stat">
+          <div class="num">42</div>
+          <div class="lbl">items in bank · 42 active</div>
+        </div>
+        <div class="op-stat">
+          <div class="num">2</div>
+          <div class="lbl">unmatched paths to review</div>
+        </div>
+        <div class="op-stat">
+          <div class="num">24m</div>
+          <div class="lbl">last session · 3 May</div>
+        </div>
+        <div class="op-stat">
+          <div class="num"><span style="color: var(--amber)">drafted</span></div>
+          <div class="lbl">parent summary · not sent</div>
+        </div>
+      </div>
+
+      <div class="section-title">Items — quality gates</div>
+      <table class="op-table">
+        <thead>
+          <tr><th>ID</th><th>Concept</th><th>Gates</th><th>Attempts</th><th>Correct</th><th>Avg hint</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Q-001</td><td>quad.factorise_monic</td><td><span class="gate-ok">✓ all</span></td><td>7</td><td>71%</td><td>L2</td></tr>
+          <tr><td>Q-005</td><td>quad.factorise_monic</td><td><span class="gate-ok">✓ all</span></td><td>4</td><td>50%</td><td>L1</td></tr>
+          <tr><td>CR-003</td><td>arith.signed_mult</td><td><span class="gate-ok">✓ all</span></td><td>3</td><td>66%</td><td>L0</td></tr>
+        </tbody>
+      </table>
+
+      <div class="h3">Unmatched paths · 2</div>
+      <div class="unmatched-card">
+        <div class="header">
+          <span class="id">Q-001 · Attempt #7 · 3 May 2026</span>
+          <span style="color: var(--teal); font-size: 12px;">correct</span>
+        </div>
+        <div>Student's path:</div>
+        <div class="steps">
+          1. (x + 6)(x - 1)<br>
+          2. expand to check: x² + 5x - 6 ✓<br>
+          3. final: (x + 6)(x - 1)
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 10px;">
+          <button class="btn btn-secondary">Approve as alternative path</button>
+          <button class="btn btn-secondary">Flag as unusual</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px;">
+        Reflection text and metacognition input verbatim are <em>not</em> displayed here. Whitelist policy DESIGN_BRIEF §10.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SESSION END ============ -->
+<div class="screen">
+  <div class="screen-label">
+    <span>STUDENT · Session End</span>
+    <span class="ref">DESIGN_BRIEF §4.7</span>
+  </div>
+  <div class="screen-body">
+    <div class="content" style="display: flex; justify-content: center;">
+      <div style="max-width: 540px; width: 100%;">
+        <div class="section-title">Session complete · 24 minutes</div>
+        <div class="h2" style="margin-bottom: 24px;">Today you:</div>
+
+        <div class="session-summary">
+          <ul>
+            <li>Solved <strong>3 of 4</strong> Core problems.</li>
+            <li>Repaired one prerequisite (sign rules).</li>
+            <li>Sign errors dropped from 5 to 1.</li>
+          </ul>
+        </div>
+
+        <div class="h3">Next session focus</div>
+        <div style="background: #fff; border: 1px solid var(--border); padding: 14px 18px; border-radius: 4px; font-size: 14px;">
+          Variation problems for transfer check.
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <button class="btn" style="padding: 10px 32px;">Done</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 18px; color: var(--muted); font-size: 12px; font-style: italic;">
+          No streak counter, no badges. Specific, factual, forward-looking.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer-note">
+  Mockup based on <strong>DESIGN_BRIEF v1.5</strong>.
+  Not implementation — visual reference only.<br>
+  Color palette: bg <code>#F9F9F7</code> · text <code>#1A1A1A</code> · teal <code>#3D7A6E</code> · amber <code>#C08A3A</code> · borders <code>#E0E0DC</code>.<br>
+  No red, no badges, no empty positivity. Math via KaTeX. 1024×768 minimum desktop.
+</div>
+
+</body>
+</html>

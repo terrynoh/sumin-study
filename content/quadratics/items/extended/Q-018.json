@@ -1,0 +1,128 @@
+{
+  "id": "Q-018",
+  "title": "Find roots and intercepts from factorised form",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "The graph of y = (x - 2)(x + 4) crosses the x-axis at A and B. Find the x-coordinates of A and B, and find the y-intercept.",
+  "student_prompt": "Show how you use the factorised form.",
+  "expected_answer": "x-intercepts at x = 2 and x = -4; y-intercept = -8",
+  "marks": 4,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "graph.roots_intercepts",
+    "quad.solve_by_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_interpret",
+    "exam.required_form",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.solve_by_factorising",
+    "coord.cartesian_coordinates",
+    "alg.substitution"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q018_ROOT_SIGN",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = -2",
+      "expected_step_number": 1,
+      "diagnostic_target": "roots_from_factors",
+      "diagnostic_sentence": "For x - 2 = 0, the root is x = 2. The sign changes when solving the bracket equation.",
+      "repair_node_ids": [
+        "quad.solve_by_factorising",
+        "alg.linear_equations"
+      ]
+    },
+    {
+      "code": "Q018_Y_INTERCEPT",
+      "category": "problem_interpretation_error",
+      "trigger": "y = 0",
+      "expected_step_number": 2,
+      "diagnostic_target": "y_intercept_substitution",
+      "diagnostic_sentence": "The y-intercept happens when x = 0, not when y = 0.",
+      "repair_node_ids": [
+        "graph.roots_intercepts",
+        "alg.substitution"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What do intercepts mean?",
+      "prompt": "An x-intercept happens when y is zero. A y-intercept happens when x is zero. Keep those two ideas separate."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Use the factorised form to find where the graph crosses the x-axis, then substitute zero for x to find the y-intercept."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Check the signs of roots from brackets, then set x = 0 for the y-intercept."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For y = (x - r)(x - s), x-intercepts come from setting each bracket to zero; the y-intercept comes from substituting x = 0. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "find x-intercepts",
+      "expression": "x = 2 or x = -4",
+      "diagnostic_target": "roots_from_factors",
+      "common_errors": [
+        "reverses signs",
+        "gives y values instead of x values"
+      ],
+      "diagnostic_sentence": "The stuck point is reading roots from factorised form."
+    },
+    {
+      "step_number": 2,
+      "action": "find y-intercept",
+      "expression": "when x = 0, y = -8",
+      "diagnostic_target": "y_intercept_substitution",
+      "common_errors": [
+        "sets y = 0 again",
+        "does not substitute x = 0"
+      ],
+      "diagnostic_sentence": "The stuck point is finding the y-intercept by substituting x = 0."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for both roots and y-intercept.",
+  "examiner_report_notes": "Likely errors: reversed root signs and confusing x-intercepts with y-intercept.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what is the difference between x-intercepts and the y-intercept?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "3.3",
+    "2.7A"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "transfer",
+  "transfer_axis": [
+    "sign_change",
+    "representation_change",
+    "method_choice"
+  ]
+}

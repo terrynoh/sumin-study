@@ -1,0 +1,98 @@
+{
+  "id": "CR-019",
+  "title": "Common factor factorising: numbers and x",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT. Atomicity=alg.common_factor_factorising; Scenario=Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise 6x + 9.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "3(2x + 3)",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.common_factor_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "num.integer_arithmetic",
+    "quad.factorise_non_monic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR019_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "3(2x + 9)",
+      "expected_step_number": 1,
+      "diagnostic_target": "common_factor",
+      "diagnostic_sentence": "If the inside terms are not divided by the common factor, the issue is confusing taking out a factor with copying the original terms. Factorising requires the reverse expansion check.",
+      "repair_node_ids": [
+        "alg.common_factor_factorising"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Common factor",
+      "prompt": "Look for the largest number that divides both 6 and 9."
+    },
+    {
+      "level": 2,
+      "title": "Take out 3",
+      "prompt": "Divide each term by 3 to see what remains inside the bracket."
+    },
+    {
+      "level": 3,
+      "title": "Check by expanding",
+      "prompt": "A common slip is taking out a factor but not checking that expanding returns 6x + 9."
+    },
+    {
+      "level": 4,
+      "title": "Factor-out routine",
+      "prompt": "Find the shared factor, divide each term by it, then check by expanding. Use these terms; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "common_factor",
+      "expression": "3(2x + 3)",
+      "diagnostic_target": "common_factor",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on dividing every original term by the common factor before writing the bracket."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.common_factor_factorising. Scenario: Called by Q-006 Q006_IGNORES_LEADING_COEFFICIENT. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak common factor control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

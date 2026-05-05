@@ -1,0 +1,97 @@
+{
+  "id": "CR-010",
+  "title": "Collect like terms: do not combine unlike terms",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-009",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-003 Q003_MIDDLE_TERM_MISSING. Atomicity=alg.collect_like_terms; Scenario=Called by Q-003 Q003_MIDDLE_TERM_MISSING; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Simplify x^2 + 3x + 2x.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x^2 + 5x",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.collect_like_terms"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "alg.expand_double_brackets"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR010_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "6x",
+      "expected_step_number": 1,
+      "diagnostic_target": "unlike_terms",
+      "diagnostic_sentence": "If x^2 is combined with x terms, the issue is treating unlike powers as the same kind of term. Middle-term work in expansion needs this separation.",
+      "repair_node_ids": [
+        "alg.collect_like_terms"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Unlike powers",
+      "prompt": "x^2 and x are not like terms because their powers are different."
+    },
+    {
+      "level": 2,
+      "title": "Collect x only",
+      "prompt": "Combine 3x and 2x first. Leave x^2 as its own term."
+    },
+    {
+      "level": 3,
+      "title": "Power slip",
+      "prompt": "A common move to check is merging the squared term with the first-power x terms. Keep different powers in separate groups."
+    },
+    {
+      "level": 4,
+      "title": "Power-check routine",
+      "prompt": "Before collecting, compare both the variable and the power. Only exact matches combine; use that here and do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "unlike_terms",
+      "expression": "x^2 + 5x",
+      "diagnostic_target": "unlike_terms",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on leaving x squared separate while collecting only the first-power x terms."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.collect_like_terms. Scenario: Called by Q-003 Q003_MIDDLE_TERM_MISSING. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak unlike terms control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

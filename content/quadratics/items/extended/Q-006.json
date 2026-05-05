@@ -1,0 +1,125 @@
+{
+  "id": "Q-006",
+  "title": "Factorise a non-monic quadratic with positive terms",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise 2x^2 + 7x + 3.",
+  "student_prompt": "Show your working and give your answer in factorised form.",
+  "expected_answer": "(2x + 1)(x + 3)",
+  "marks": 3,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "factorised_form",
+  "concept_ids": [
+    "quad.factorise_non_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.factorise_monic",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q006_IGNORES_LEADING_COEFFICIENT",
+      "category": "strategy_selection_error",
+      "trigger": "x + 1",
+      "expected_step_number": 1,
+      "diagnostic_target": "non_monic_structure",
+      "diagnostic_sentence": "This is not a monic quadratic. The leading coefficient 2 must appear in one of the brackets.",
+      "repair_node_ids": [
+        "quad.factorise_non_monic",
+        "alg.expand_double_brackets"
+      ]
+    },
+    {
+      "code": "Q006_MIDDLE_TERM_CHECK",
+      "category": "checking_finalization_error",
+      "trigger": "2x^2 + 6x + x + 3",
+      "expected_step_number": 2,
+      "diagnostic_target": "middle_term_check",
+      "diagnostic_sentence": "Your bracket check must create 7x from the two middle products.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets",
+        "alg.collect_like_terms"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What changes when the leading coefficient is not 1?",
+      "prompt": "This quadratic needs the non-monic method rather than the simple x^2 + bx + c routine. One bracket must carry the leading coefficient."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Set up first terms in the brackets so they multiply to the leading term. Then test constant choices by checking the middle term."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students ignore the leading coefficient and build two x-brackets. Check that expanding your first terms recreates the original leading term."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For ax^2 + bx + c with a not equal to 1, choose bracket first terms that multiply to ax^2, then choose constants so the cross-products combine to bx. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "set up non-monic bracket structure",
+      "expression": "(2x + ?)(x + ?)",
+      "diagnostic_target": "non_monic_structure",
+      "common_errors": [
+        "treats it like x^2 + bx + c",
+        "does not include 2x in a bracket"
+      ],
+      "diagnostic_sentence": "The stuck point is accounting for the leading coefficient."
+    },
+    {
+      "step_number": 2,
+      "action": "choose constants and check middle term",
+      "expression": "(2x + 1)(x + 3)",
+      "diagnostic_target": "middle_term_check",
+      "common_errors": [
+        "gets a middle term of 5x",
+        "does not expand to check"
+      ],
+      "diagnostic_sentence": "The stuck point is checking the middle term produced by the two brackets."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award method credit for a valid non-monic bracket structure; full credit for (2x + 1)(x + 3).",
+  "examiner_report_notes": "Likely errors: treating the item as monic, failing to check the middle coefficient.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what changes because the coefficient of x^2 is not 1?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

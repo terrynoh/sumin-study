@@ -1,0 +1,122 @@
+{
+  "id": "Q-013",
+  "title": "Use the discriminant to determine the number of roots",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "For x^2 - 4x + 7 = 0, find the value of the discriminant and state the number of real roots.",
+  "student_prompt": "Show your calculation of b^2 - 4ac.",
+  "expected_answer": "Discriminant = -12; no real roots",
+  "marks": 3,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.discriminant"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "quad.quadratic_formula",
+    "num.negative_numbers",
+    "num.squares_roots",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q013_DISCRIMINANT_SIGN",
+      "category": "conceptual_misunderstanding",
+      "trigger": "positive discriminant",
+      "expected_step_number": 1,
+      "diagnostic_target": "discriminant_sign_interpretation",
+      "diagnostic_sentence": "The calculated discriminant is negative, so the interpretation should follow the negative case.",
+      "repair_node_ids": [
+        "quad.discriminant"
+      ]
+    },
+    {
+      "code": "Q013_ROOT_INTERPRETATION",
+      "category": "conceptual_misunderstanding",
+      "trigger": "two roots",
+      "expected_step_number": 2,
+      "diagnostic_target": "discriminant_interpretation",
+      "diagnostic_sentence": "A negative discriminant means there are no real roots.",
+      "repair_node_ids": [
+        "quad.discriminant"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does the discriminant decide?",
+      "prompt": "The discriminant tells you about the number of real roots without solving the whole equation."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Identify a, b, and c, then calculate b^2 - 4ac carefully."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students calculate a discriminant but do not interpret its sign. The sign is the point of the question."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "After calculating b^2 - 4ac, use only its sign to decide the root case. Apply the sign test to your calculated value."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "calculate discriminant",
+      "expression": "(-4)^2 - 4(1)(7) = -12",
+      "diagnostic_target": "coefficient_identification",
+      "common_errors": [
+        "describes the discriminant as positive",
+        "does not connect the calculated sign to the root case"
+      ],
+      "diagnostic_sentence": "The stuck point is using the sign of the discriminant for the root case."
+    },
+    {
+      "step_number": 2,
+      "action": "interpret discriminant",
+      "expression": "negative discriminant means no real roots",
+      "diagnostic_target": "discriminant_interpretation",
+      "common_errors": [
+        "says two real roots",
+        "does not connect sign to roots"
+      ],
+      "diagnostic_sentence": "The stuck point is interpreting what a negative discriminant means."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for correct discriminant calculation and correct interpretation.",
+  "examiner_report_notes": "Likely errors: arithmetic sign mistakes and weak interpretation of discriminant sign.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what does the discriminant tell you?",
+  "transfer_variation_of": "Q-012",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "sign_change"
+  ]
+}

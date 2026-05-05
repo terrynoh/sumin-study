@@ -1,0 +1,98 @@
+{
+  "id": "CR-014",
+  "title": "Linear equations: solve plus bracket equals zero",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-013",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-005 Q005_WRONG_ROOT_SIGNS. Atomicity=alg.linear_equations; Scenario=Called by Q-005 Q005_WRONG_ROOT_SIGNS; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Solve x + 4 = 0.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x = -4",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.linear_equations"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.collect_like_terms",
+    "num.negative_numbers",
+    "quad.solve_by_factorising"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR014_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = 4",
+      "expected_step_number": 1,
+      "diagnostic_target": "linear_plus_bracket",
+      "diagnostic_sentence": "If x + 4 = 0 gives x = 4, the issue is not using the opposite value to make zero. This sign step reappears when finding roots from brackets.",
+      "repair_node_ids": [
+        "alg.linear_equations"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Plus equation",
+      "prompt": "Solving x + 4 = 0 asks what value of x makes the sum equal zero."
+    },
+    {
+      "level": 2,
+      "title": "Undo addition",
+      "prompt": "Undo adding 4 by subtracting 4 from both sides."
+    },
+    {
+      "level": 3,
+      "title": "Opposite sign",
+      "prompt": "A common slip is answering x = 4 because the number shown is 4. The zero balance needs the opposite sign."
+    },
+    {
+      "level": 4,
+      "title": "Zero-balance routine",
+      "prompt": "For x + a = 0, x must be -a so the two terms cancel. Apply that here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "linear_plus_bracket",
+      "expression": "x = -4",
+      "diagnostic_target": "linear_plus_bracket",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on choosing the value that cancels +4 rather than repeating the visible number."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.linear_equations. Scenario: Called by Q-005 Q005_WRONG_ROOT_SIGNS. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak linear plus bracket control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

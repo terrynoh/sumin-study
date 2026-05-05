@@ -1,0 +1,152 @@
+{
+  "id": "Q-015",
+  "title": "Model a rectangle area problem with a quadratic equation",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "A rectangle has length (x + 5) cm and width (x + 2) cm. Its area is 54 cm^2. Form an equation in x and solve it.",
+  "student_prompt": "Show the equation you form and give the positive value of x.",
+  "expected_answer": "x = 4",
+  "marks": 5,
+  "difficulty": 4,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.word_problem_modeling",
+    "quad.solve_by_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_solve",
+    "exam.command_interpret",
+    "exam.required_form",
+    "exam.working_marks",
+    "exam.rounding_units"
+  ],
+  "prerequisite_ids": [
+    "alg.expand_double_brackets",
+    "quad.factorise_monic",
+    "alg.linear_equations",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q015_SETUP_ADD_INSTEAD_MULTIPLY",
+      "category": "problem_interpretation_error",
+      "trigger": "x + 5 + x + 2",
+      "expected_step_number": 1,
+      "diagnostic_target": "area_model_setup",
+      "diagnostic_sentence": "Area of a rectangle is length multiplied by width, not length added to width.",
+      "repair_node_ids": [
+        "quad.word_problem_modeling",
+        "exam.command_interpret"
+      ]
+    },
+    {
+      "code": "Q015_NEGATIVE_CONTEXT_ROOT",
+      "category": "checking_finalization_error",
+      "trigger": "x = -12",
+      "expected_step_number": 4,
+      "diagnostic_target": "contextual_root_choice",
+      "diagnostic_sentence": "The negative root does not make sense for this length context. Use the positive value of x.",
+      "repair_node_ids": [
+        "exam.command_interpret",
+        "exam.required_form"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What relationship describes the situation?",
+      "prompt": "For a rectangle, area comes from multiplying length and width. Do not use perimeter thinking."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Write an equation by multiplying the two side expressions and setting the product equal to the given area."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students solve the algebra but forget that a length context may reject a negative value."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For area word problems, form product = area, rearrange to a quadratic equation, solve, then check which solution makes sense in context. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "form area equation",
+      "expression": "(x + 5)(x + 2) = 54",
+      "diagnostic_target": "area_model_setup",
+      "common_errors": [
+        "adds length and width",
+        "does not set area equal to 54"
+      ],
+      "diagnostic_sentence": "The stuck point is forming the area equation from the context."
+    },
+    {
+      "step_number": 2,
+      "action": "expand and rearrange",
+      "expression": "x^2 + 7x - 44 = 0",
+      "diagnostic_target": "quadratic_model_rearrangement",
+      "common_errors": [
+        "does not subtract 54",
+        "expands brackets incorrectly"
+      ],
+      "diagnostic_sentence": "The stuck point is expanding and rearranging into a quadratic equation."
+    },
+    {
+      "step_number": 3,
+      "action": "solve equation",
+      "expression": "(x + 11)(x - 4) = 0, so x = -11 or x = 4",
+      "diagnostic_target": "contextual_root_choice",
+      "common_errors": [
+        "keeps a negative value",
+        "does not check in the original area"
+      ],
+      "diagnostic_sentence": "The stuck point is solving and checking the value in the original context."
+    },
+    {
+      "step_number": 4,
+      "action": "choose contextual value",
+      "expression": "x = 4",
+      "diagnostic_target": "contextual_root_choice",
+      "common_errors": [
+        "chooses x = -11",
+        "does not reject the negative length"
+      ],
+      "diagnostic_sentence": "The stuck point is rejecting the value that does not make sense for a rectangle length."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for area equation, expansion/rearrangement, factorisation, and contextual positive value.",
+  "examiner_report_notes": "Likely errors: adding dimensions instead of multiplying, failing to reject the negative root.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, which formula connects the measurements in the problem?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7C",
+    "2.7A"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "transfer",
+  "transfer_axis": [
+    "context_change",
+    "method_choice"
+  ]
+}

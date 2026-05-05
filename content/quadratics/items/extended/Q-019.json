@@ -1,0 +1,140 @@
+{
+  "id": "Q-019",
+  "title": "Sketch features of a quadratic graph",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Sketch the graph of y = (x - 1)^2 - 4, showing the turning point and the x-intercepts.",
+  "student_prompt": "You do not need a table of values, but mark the key features clearly.",
+  "expected_answer": "Turning point (1, -4); x-intercepts x = -1 and x = 3; upward-opening parabola",
+  "marks": 5,
+  "difficulty": 4,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "completed_square_form",
+  "concept_ids": [
+    "graph.quadratic_shape",
+    "graph.turning_point_symmetry",
+    "graph.roots_intercepts"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_sketch",
+    "exam.required_form",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.completing_square",
+    "coord.cartesian_coordinates",
+    "quad.solve_by_factorising"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q019_TURNING_POINT_SIGN",
+      "category": "conceptual_misunderstanding",
+      "trigger": "(-1, -4)",
+      "expected_step_number": 1,
+      "diagnostic_target": "turning_point_from_completed_square",
+      "diagnostic_sentence": "In (x - 1)^2 - 4, the turning point is (1, -4), not (-1, -4).",
+      "repair_node_ids": [
+        "graph.turning_point_symmetry",
+        "quad.completing_square"
+      ]
+    },
+    {
+      "code": "Q019_SKETCH_MISSING_FEATURES",
+      "category": "checking_finalization_error",
+      "trigger": "no intercepts",
+      "expected_step_number": 3,
+      "diagnostic_target": "sketch_key_features",
+      "diagnostic_sentence": "A sketch question needs the important features marked, including turning point and intercepts.",
+      "repair_node_ids": [
+        "exam.command_sketch",
+        "graph.quadratic_shape"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What must a sketch show?",
+      "prompt": "A sketch is not just a rough curve. It should show the key features that identify the quadratic."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Read the turning point from completed-square form, then find where the graph meets the x-axis."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students draw the right shape but miss labels, or reverse the sign of the turning point x-coordinate."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For y = (x - h)^2 + k, mark the turning point, solve y = 0 for x-intercepts if needed, and draw the correct opening direction. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "identify turning point",
+      "expression": "(1, -4)",
+      "diagnostic_target": "turning_point_from_completed_square",
+      "common_errors": [
+        "writes (-1, -4)",
+        "writes (1, 4)"
+      ],
+      "diagnostic_sentence": "The stuck point is reading the turning point from completed-square form."
+    },
+    {
+      "step_number": 2,
+      "action": "find x-intercepts",
+      "expression": "x = -1 and x = 3",
+      "diagnostic_target": "roots_from_completed_square",
+      "common_errors": [
+        "gives one intercept",
+        "does not set y = 0"
+      ],
+      "diagnostic_sentence": "The stuck point is finding the x-intercepts."
+    },
+    {
+      "step_number": 3,
+      "action": "sketch key features",
+      "expression": "upward-opening parabola with turning point and intercepts marked",
+      "diagnostic_target": "sketch_key_features",
+      "common_errors": [
+        "draws a line",
+        "omits key labels"
+      ],
+      "diagnostic_sentence": "The stuck point is showing the key features required by a sketch command."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for turning point, intercepts, correct shape, and labelled sketch features.",
+  "examiner_report_notes": "Likely errors: x-coordinate sign in completed-square form and incomplete sketch labelling.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what key features must a sketch show?",
+  "transfer_variation_of": "Q-018",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "3.3",
+    "2.4D",
+    "2.7A"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "transfer",
+  "transfer_axis": [
+    "sign_change",
+    "representation_change"
+  ]
+}

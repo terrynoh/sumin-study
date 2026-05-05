@@ -1,0 +1,100 @@
+{
+  "id": "CR-025",
+  "title": "Zero-product link: brackets to roots",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what does a product equal to zero tell you?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "ACADEMIC-FILTER-CR-additions",
+    "notes": "Called by Q-005 Q005_WRONG_ROOT_SIGNS. Atomicity=quad.solve_by_factorising; Scenario=Called by Q-005 Q005_WRONG_ROOT_SIGNS; Surface variation=yes; No new vocab=yes; Steps=1-2. Added after academic validation."
+  },
+  "problem_text": "If (x - 3)(x + 5) = 0, write the two values of x.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x = 3 or x = -5",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.solve_by_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_solve",
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.linear_equations",
+    "num.negative_numbers"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR025_ROOT_SIGNS",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = -3",
+      "expected_step_number": 1,
+      "diagnostic_target": "zero_product_property",
+      "diagnostic_sentence": "If each bracket is made equal to zero, the sign changes when solving each small linear equation.",
+      "repair_node_ids": [
+        "quad.solve_by_factorising",
+        "alg.linear_equations"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Product equals zero",
+      "prompt": "A product is zero when at least one factor is zero."
+    },
+    {
+      "level": 2,
+      "title": "Make each bracket zero",
+      "prompt": "Treat each bracket as a small equation equal to zero."
+    },
+    {
+      "level": 3,
+      "title": "Sign-link check",
+      "prompt": "The value of x is the number that makes the bracket become zero."
+    },
+    {
+      "level": 4,
+      "title": "Root routine",
+      "prompt": "Set each bracket equal to zero, solve the two small equations, and keep both values."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "use zero-product property",
+      "expression": "x - 3 = 0 or x + 5 = 0, so x = 3 or x = -5",
+      "diagnostic_target": "zero_product_property",
+      "common_errors": [
+        "x = -3 or x = 5",
+        "keeps the bracket signs as the root signs"
+      ],
+      "diagnostic_sentence": "This repair focuses on turning each bracket into a small equation and solving for both x values."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: quad.solve_by_factorising. Scenario: Called by Q-005 Q005_WRONG_ROOT_SIGNS. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational pattern: factorised form is reached, but the root signs are copied from the brackets.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: solving from factorised form"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

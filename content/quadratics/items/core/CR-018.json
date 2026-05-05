@@ -1,0 +1,99 @@
+{
+  "id": "CR-018",
+  "title": "Expand single bracket: negative term",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-017",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-007 Q007_MIDDLE_TERM_WRONG. Atomicity=alg.expand_single_bracket; Scenario=Called by Q-007 Q007_MIDDLE_TERM_WRONG; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Expand -2(x - 5).",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "-2x + 10",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.expand_single_bracket"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.variables_expressions",
+    "num.negative_numbers",
+    "alg.expand_double_brackets"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR018_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "-2x - 10",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_distribution",
+      "diagnostic_sentence": "If the constant term becomes -10, the issue is sign control during distribution. Non-monic factorising and expansion both depend on this negative-multiplier step.",
+      "repair_node_ids": [
+        "alg.expand_single_bracket"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Negative multiplier",
+      "prompt": "The outside multiplier is -2, so it must multiply both x and -5."
+    },
+    {
+      "level": 2,
+      "title": "Second product",
+      "prompt": "Calculate -2 times -5 carefully: two negatives make a positive."
+    },
+    {
+      "level": 3,
+      "title": "Sign slip",
+      "prompt": "The sign trap is the second multiplication: -2 times -5 is positive, so the constant term should not stay negative."
+    },
+    {
+      "level": 4,
+      "title": "Negative distribution routine",
+      "prompt": "Distribute the negative multiplier term by term and check each sign separately. Apply it here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "negative_distribution",
+      "expression": "-2x + 10",
+      "diagnostic_target": "negative_distribution",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on multiplying a negative outside term by a negative inside term and getting a positive constant."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.expand_single_bracket. Scenario: Called by Q-007 Q007_MIDDLE_TERM_WRONG. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak negative distribution control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

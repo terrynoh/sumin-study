@@ -1,0 +1,125 @@
+{
+  "id": "Q-001",
+  "title": "Factorise a monic quadratic with positive constants",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch1-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise x^2 + 5x + 6.",
+  "student_prompt": "Show your working and give your answer in factorised form.",
+  "expected_answer": "(x + 2)(x + 3)",
+  "marks": 2,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "factorised_form",
+  "concept_ids": [
+    "quad.factorise_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "num.integer_arithmetic",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q001_PAIR_SUM_PRODUCT",
+      "category": "strategy_selection_error",
+      "trigger": "adds to 6 multiplies to 5",
+      "expected_step_number": 1,
+      "diagnostic_target": "factor_pair_selection",
+      "diagnostic_sentence": "The constant and coefficient roles have been swapped. For x^2 + 5x + 6, the numbers must multiply to 6 and add to 5.",
+      "repair_node_ids": [
+        "quad.factorise_monic",
+        "num.integer_arithmetic"
+      ]
+    },
+    {
+      "code": "Q001_WRONG_FINAL_FORM",
+      "category": "checking_finalization_error",
+      "trigger": "x =",
+      "expected_step_number": 2,
+      "diagnostic_target": "required_factorised_form",
+      "diagnostic_sentence": "The question asks you to factorise the expression, not solve an equation. The final answer should be two brackets.",
+      "repair_node_ids": [
+        "exam.required_form",
+        "notation.igcse_quadratic_forms"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What structure are you looking for?",
+      "prompt": "This expression is a simple quadratic that can be rewritten as two brackets. Think about how two bracket constants control the last term and the middle term."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "List factor pairs of the constant term, then ask which pair could also create the middle coefficient when the brackets are expanded."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students check only the product and forget the sum. Your pair must satisfy both conditions before you write brackets."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For any x^2 + bx + c, look for p and q with pq = c and p + q = b, then write the bracket pattern using p and q. Apply this pattern to your expression; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "choose factor pair",
+      "expression": "2 and 3 multiply to 6 and add to 5",
+      "diagnostic_target": "factor_pair_selection",
+      "common_errors": [
+        "uses numbers that add to 6 and multiply to 5",
+        "chooses 1 and 6 without checking the sum"
+      ],
+      "diagnostic_sentence": "The stuck point is choosing the pair of numbers that matches both the product and the sum."
+    },
+    {
+      "step_number": 2,
+      "action": "write factorised form",
+      "expression": "(x + 2)(x + 3)",
+      "diagnostic_target": "required_factorised_form",
+      "common_errors": [
+        "writes x = -2 or x = -3 even though this is not an equation",
+        "leaves answer as x^2 + 5x + 6"
+      ],
+      "diagnostic_sentence": "The stuck point is the final answer form: this item needs brackets, not solved values."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award 1 mark for a valid factor pair 2 and 3; 1 mark for the correct factorised expression.",
+  "examiner_report_notes": "Common errors expected: reversing sum/product roles, using a correct pair but writing solved roots instead of factorised form.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what type of factorising problem is this?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "introductory"
+  ]
+}

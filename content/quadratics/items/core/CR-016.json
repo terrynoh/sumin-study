@@ -1,0 +1,97 @@
+{
+  "id": "CR-016",
+  "title": "Rearranging formulae: move all terms to one side",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-015",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-016 Q016_CONSECUTIVE_SETUP. Atomicity=alg.rearranging_formulae; Scenario=Called by Q-016 Q016_CONSECUTIVE_SETUP; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Rewrite x^2 + x = 20 as an equation equal to zero.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x^2 + x - 20 = 0",
+  "marks": 2,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.rearranging_formulae"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.linear_equations",
+    "quad.word_problem_modeling"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR016_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x^2 + x + 20 = 0",
+      "expected_step_number": 1,
+      "diagnostic_target": "rearrange_to_zero",
+      "diagnostic_sentence": "If the moved 20 keeps a plus sign, the issue is rearranging to zero without using the inverse operation. Quadratic solving usually begins with this standard form.",
+      "repair_node_ids": [
+        "alg.rearranging_formulae"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Equal zero form",
+      "prompt": "To rewrite as equal to zero, move every term to one side and leave 0 on the other side."
+    },
+    {
+      "level": 2,
+      "title": "Move 20",
+      "prompt": "The 20 is on the right, so subtract 20 from both sides."
+    },
+    {
+      "level": 3,
+      "title": "Sign of moved term",
+      "prompt": "Watch the sign when 20 moves to the left side. Subtracting 20 gives a negative constant in the zero form."
+    },
+    {
+      "level": 4,
+      "title": "Zero-form routine",
+      "prompt": "Choose one side for all terms, use inverse operations to move the rest, and check the sign. Apply it here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "rearrange_to_zero",
+      "expression": "x^2 + x - 20 = 0",
+      "diagnostic_target": "rearrange_to_zero",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on moving the constant to the left side with the correct sign so the equation equals zero."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.rearranging_formulae. Scenario: Called by Q-016 Q016_CONSECUTIVE_SETUP. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak rearrange to zero control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

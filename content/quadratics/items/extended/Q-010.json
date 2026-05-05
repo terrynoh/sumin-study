@@ -1,0 +1,127 @@
+{
+  "id": "Q-010",
+  "title": "Complete the square with a negative middle term",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Write x^2 - 4x + 1 in the form (x + a)^2 + b.",
+  "student_prompt": "Show your working.",
+  "expected_answer": "(x - 2)^2 - 3",
+  "marks": 3,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "completed_square_form",
+  "concept_ids": [
+    "quad.completing_square"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.standard_form",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "num.negative_numbers"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q010_SIGN_IN_SQUARE",
+      "category": "sign_error",
+      "trigger": "x + 2",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_middle_coefficient",
+      "diagnostic_sentence": "The middle term is -4x, so the bracket should be (x - 2), not (x + 2).",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.completing_square"
+      ]
+    },
+    {
+      "code": "Q010_CONSTANT_ADJUSTMENT",
+      "category": "calculation_error",
+      "trigger": "+ 3",
+      "expected_step_number": 2,
+      "diagnostic_target": "constant_adjustment",
+      "diagnostic_sentence": "(x - 2)^2 gives +4, so to end at +1 you need -3 outside.",
+      "repair_node_ids": [
+        "quad.completing_square",
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What sign should be inside the square?",
+      "prompt": "The sign of the middle term controls the sign inside the completed square bracket."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Halve the coefficient of x while keeping its sign, then build the squared bracket from that value."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Check both the size and the negative sign, then check the direction of the outside constant adjustment."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For x^2 + bx + c, build (x + b/2)^2 and then compare its constant with the original constant. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "halve the x coefficient with sign",
+      "expression": "-4 / 2 = -2",
+      "diagnostic_target": "negative_middle_coefficient",
+      "common_errors": [
+        "uses +2",
+        "drops the negative sign"
+      ],
+      "diagnostic_sentence": "The stuck point is preserving the negative sign when halving the middle coefficient."
+    },
+    {
+      "step_number": 2,
+      "action": "adjust the constant",
+      "expression": "(x - 2)^2 - 3",
+      "diagnostic_target": "constant_adjustment",
+      "common_errors": [
+        "adds 3",
+        "does not compare 4 with 1"
+      ],
+      "diagnostic_sentence": "The stuck point is adjusting the constant in the correct direction."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award credit for (x-2)^2 and correct -3 adjustment.",
+  "examiner_report_notes": "Likely errors: sign loss and wrong constant adjustment direction.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, how will you keep track of the negative sign?",
+  "transfer_variation_of": "Q-009",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4D",
+    "2.7B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "sign_change",
+    "method_choice"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "CR-013",
+  "title": "Linear equations: solve bracket equals zero",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-005 Q005_WRONG_ROOT_SIGNS; Called by Q-005 Q005_STOPS_AT_FACTORS. Atomicity=alg.linear_equations; Scenario=Called by Q-005 Q005_WRONG_ROOT_SIGNS; Called by Q-005 Q005_STOPS_AT_FACTORS; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Solve x - 6 = 0.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x = 6",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.linear_equations"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks",
+    "exam.command_solve"
+  ],
+  "prerequisite_ids": [
+    "alg.collect_like_terms",
+    "quad.solve_by_factorising"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR013_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = -6",
+      "expected_step_number": 1,
+      "diagnostic_target": "linear_from_bracket",
+      "diagnostic_sentence": "If x - 6 = 0 gives x = -6, the issue is the inverse-operation step in a linear equation. This is a building block for solving factorised quadratics.",
+      "repair_node_ids": [
+        "alg.linear_equations"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Solve meaning",
+      "prompt": "Solving x - 6 = 0 means finding the value of x that makes the equation true."
+    },
+    {
+      "level": 2,
+      "title": "Inverse operation",
+      "prompt": "Undo subtracting 6 by adding 6 to both sides."
+    },
+    {
+      "level": 3,
+      "title": "Sign reversal",
+      "prompt": "A common slip is moving 6 across and flipping the sign the other way. Check by substituting your x back in."
+    },
+    {
+      "level": 4,
+      "title": "Linear-zero routine",
+      "prompt": "For x - a = 0, add a to both sides; for x + a = 0, subtract a. Apply the matching case here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "linear_from_bracket",
+      "expression": "x = 6",
+      "diagnostic_target": "linear_from_bracket",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on undoing the subtraction with the correct inverse operation and checking the resulting x value."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.linear_equations. Scenario: Called by Q-005 Q005_WRONG_ROOT_SIGNS; Called by Q-005 Q005_STOPS_AT_FACTORS. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak linear from bracket control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

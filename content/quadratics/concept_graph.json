@@ -1,0 +1,844 @@
+{
+  "schema_version": "0.1",
+  "project": "SUMIN STUDY",
+  "deliverable": "C-001",
+  "title": "Quadratics Concept Graph",
+  "exam_board": {
+    "board": "Pearson Edexcel International GCSE Mathematics A",
+    "syllabus_code": "4MA1",
+    "primary_tier": "higher",
+    "repair_tier": "foundation_prerequisite_repair",
+    "student_stage": "Year 10",
+    "paper_codes": [
+      "4MA1/1H",
+      "4MA1/2H"
+    ],
+    "assessment_route": "linear"
+  },
+  "language_policy": {
+    "student_facing_language": "en",
+    "korean_support": "not_used_in_student_loop"
+  },
+  "source_refs": [
+    {
+      "id": "pearson_edexcel_4ma1_specification_a",
+      "title": "Pearson Edexcel International GCSE Mathematics A (4MA1) Specification",
+      "url": "https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/Mathematics%20A/2016/Specification%20and%20sample%20assessments/international-gcse-in-mathematics-spec-a.pdf"
+    }
+  ],
+  "graph_policy": {
+    "edge_meaning": "A prerequisite edge points from the current node to concepts that should be secure before the current node is treated as ready.",
+    "repair_policy": "Repair skills are Foundation-assumed prerequisite support for Edexcel 4MA1 Higher, not a separate lower target path.",
+    "higher_policy": "Edexcel 4MA1 Higher quadratics skills form the main MVP path, paced for a Year 10 learner.",
+    "exam_literacy_policy": "Exam literacy nodes are separate from math nodes and are connected through cross_links."
+  },
+  "nodes": [
+    {
+      "id": "num.integer_arithmetic",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "number",
+      "name_en": "Integer arithmetic",
+      "name_ko_optional": null,
+      "description": "Add, subtract, multiply, and divide integers accurately.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "calculation_error",
+        "sign_error"
+      ]
+    },
+    {
+      "id": "num.negative_numbers",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "number",
+      "name_en": "Negative numbers",
+      "name_ko_optional": null,
+      "description": "Interpret and operate with negative values, especially in multiplication and subtraction.",
+      "prerequisites": [
+        "num.integer_arithmetic"
+      ],
+      "diagnostic_focus": [
+        "sign_error",
+        "conceptual_misunderstanding"
+      ]
+    },
+    {
+      "id": "num.squares_roots",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "number",
+      "name_en": "Squares and square roots",
+      "name_ko_optional": null,
+      "description": "Recall and use common square numbers and square roots when solving equations or interpreting graphs.",
+      "prerequisites": [
+        "num.integer_arithmetic"
+      ],
+      "diagnostic_focus": [
+        "formula_memory_error",
+        "calculation_error"
+      ]
+    },
+    {
+      "id": "alg.variables_expressions",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Variables and algebraic expressions",
+      "name_ko_optional": null,
+      "description": "Understand variables, terms, coefficients, constants, and algebraic expressions.",
+      "prerequisites": [
+        "num.integer_arithmetic"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "alg.collect_like_terms",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Collecting like terms",
+      "name_ko_optional": null,
+      "description": "Simplify expressions by combining only terms with the same variable structure.",
+      "prerequisites": [
+        "alg.variables_expressions",
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "calculation_error",
+        "conceptual_misunderstanding"
+      ]
+    },
+    {
+      "id": "alg.substitution",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Substitution",
+      "name_ko_optional": null,
+      "description": "Substitute numerical values into algebraic expressions and evaluate accurately.",
+      "prerequisites": [
+        "alg.variables_expressions",
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "calculation_error",
+        "sign_error"
+      ]
+    },
+    {
+      "id": "alg.linear_equations",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Linear equations",
+      "name_ko_optional": null,
+      "description": "Solve one-variable linear equations using inverse operations.",
+      "prerequisites": [
+        "alg.collect_like_terms",
+        "alg.substitution"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "calculation_error"
+      ]
+    },
+    {
+      "id": "alg.rearranging_formulae",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Rearranging formulae",
+      "name_ko_optional": null,
+      "description": "Change the subject of a formula using valid inverse operations.",
+      "prerequisites": [
+        "alg.linear_equations"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "conceptual_misunderstanding"
+      ]
+    },
+    {
+      "id": "alg.expand_single_bracket",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Expanding a single bracket",
+      "name_ko_optional": null,
+      "description": "Apply distribution to expand expressions such as a(x + b).",
+      "prerequisites": [
+        "alg.variables_expressions",
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "sign_error",
+        "calculation_error"
+      ]
+    },
+    {
+      "id": "alg.expand_double_brackets",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "algebra",
+      "name_en": "Expanding double brackets",
+      "name_ko_optional": null,
+      "description": "Expand products such as (x + a)(x + b) and collect like terms.",
+      "prerequisites": [
+        "alg.expand_single_bracket",
+        "alg.collect_like_terms"
+      ],
+      "diagnostic_focus": [
+        "sign_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "alg.common_factor_factorising",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "algebra",
+      "name_en": "Common-factor factorising",
+      "name_ko_optional": null,
+      "description": "Factorise expressions by taking out the highest common factor.",
+      "prerequisites": [
+        "alg.variables_expressions",
+        "num.integer_arithmetic"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "conceptual_misunderstanding"
+      ]
+    },
+    {
+      "id": "quad.standard_form",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Quadratic standard form",
+      "name_ko_optional": null,
+      "description": "Recognise and use quadratic expressions and equations in the form ax^2 + bx + c.",
+      "prerequisites": [
+        "alg.variables_expressions",
+        "alg.collect_like_terms"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "quad.factorise_monic",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Factorising monic quadratics",
+      "name_ko_optional": null,
+      "description": "Factorise expressions of the form x^2 + bx + c into two linear brackets.",
+      "prerequisites": [
+        "alg.expand_double_brackets",
+        "quad.standard_form",
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "sign_error"
+      ]
+    },
+    {
+      "id": "quad.factorise_non_monic",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Factorising non-monic quadratics",
+      "name_ko_optional": null,
+      "description": "Factorise expressions of the form ax^2 + bx + c where a is not 1.",
+      "prerequisites": [
+        "quad.factorise_monic",
+        "alg.common_factor_factorising"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "calculation_error"
+      ]
+    },
+    {
+      "id": "quad.difference_of_squares",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Difference of two squares",
+      "name_ko_optional": null,
+      "description": "Recognise and factorise expressions of the form a^2 - b^2.",
+      "prerequisites": [
+        "num.squares_roots",
+        "alg.expand_double_brackets"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "formula_memory_error"
+      ]
+    },
+    {
+      "id": "quad.solve_by_factorising",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Solving quadratic equations by factorising",
+      "name_ko_optional": null,
+      "description": "Solve quadratic equations by factorising and using the zero-product property.",
+      "prerequisites": [
+        "quad.factorise_monic",
+        "quad.factorise_non_monic",
+        "alg.linear_equations"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "quad.quadratic_formula",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Quadratic formula",
+      "name_ko_optional": null,
+      "description": "Use the quadratic formula to solve ax^2 + bx + c = 0 when appropriate.",
+      "prerequisites": [
+        "quad.standard_form",
+        "alg.substitution",
+        "num.squares_roots",
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "formula_memory_error",
+        "sign_error"
+      ]
+    },
+    {
+      "id": "quad.discriminant",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Discriminant and number of roots",
+      "name_ko_optional": null,
+      "description": "Use b^2 - 4ac to reason about the number and type of roots.",
+      "prerequisites": [
+        "quad.quadratic_formula",
+        "num.squares_roots"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "formula_memory_error"
+      ]
+    },
+    {
+      "id": "quad.completing_square",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Completing the square",
+      "name_ko_optional": null,
+      "description": "Rewrite a quadratic in completed-square form to find turning points or solve equations.",
+      "prerequisites": [
+        "quad.standard_form",
+        "alg.expand_double_brackets",
+        "alg.rearranging_formulae"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "conceptual_misunderstanding"
+      ]
+    },
+    {
+      "id": "coord.cartesian_coordinates",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "coordinate_geometry",
+      "name_en": "Cartesian coordinates",
+      "name_ko_optional": null,
+      "description": "Read, plot, and interpret points on coordinate axes.",
+      "prerequisites": [
+        "num.negative_numbers"
+      ],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "graph.table_of_values",
+      "type": "math_concept",
+      "tier": "core_repair",
+      "strand": "graphs",
+      "name_en": "Table of values",
+      "name_ko_optional": null,
+      "description": "Generate coordinate pairs from a function using substitution.",
+      "prerequisites": [
+        "alg.substitution",
+        "coord.cartesian_coordinates"
+      ],
+      "diagnostic_focus": [
+        "calculation_error",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "graph.quadratic_shape",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "graphs",
+      "name_en": "Quadratic graph shape",
+      "name_ko_optional": null,
+      "description": "Recognise, sketch, and interpret the shape of y = ax^2 + bx + c.",
+      "prerequisites": [
+        "quad.standard_form",
+        "graph.table_of_values"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "graph.roots_intercepts",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "graphs",
+      "name_en": "Roots and intercepts",
+      "name_ko_optional": null,
+      "description": "Connect algebraic roots with x-intercepts and interpret y-intercepts.",
+      "prerequisites": [
+        "quad.solve_by_factorising",
+        "graph.quadratic_shape"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "graph.turning_point_symmetry",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "graphs",
+      "name_en": "Turning point and symmetry",
+      "name_ko_optional": null,
+      "description": "Identify and interpret the turning point and line of symmetry of a quadratic graph.",
+      "prerequisites": [
+        "graph.quadratic_shape",
+        "quad.completing_square"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "strategy_selection_error"
+      ]
+    },
+    {
+      "id": "graph.solve_graphically",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "graphs",
+      "name_en": "Solving equations graphically",
+      "name_ko_optional": null,
+      "description": "Use graphs to estimate or interpret solutions of quadratic equations.",
+      "prerequisites": [
+        "graph.roots_intercepts",
+        "coord.cartesian_coordinates"
+      ],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "quad.method_selection",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Choosing a quadratic method",
+      "name_ko_optional": null,
+      "description": "Select between factorising, formula, completing the square, or graphing based on the problem form.",
+      "prerequisites": [
+        "quad.solve_by_factorising",
+        "quad.quadratic_formula",
+        "quad.completing_square",
+        "graph.solve_graphically"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "quad.word_problem_modeling",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Quadratic word-problem modelling",
+      "name_ko_optional": null,
+      "description": "Translate real-life or geometric contexts into quadratic expressions or equations.",
+      "prerequisites": [
+        "quad.method_selection",
+        "exam.command_interpret",
+        "exam.required_form"
+      ],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "strategy_selection_error"
+      ]
+    },
+    {
+      "id": "exam.command_solve",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "command_words",
+      "name_en": "Command word: solve",
+      "name_ko_optional": null,
+      "description": "Recognise that 'solve' requires values that satisfy an equation, usually with working shown.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "exam.command_show_that",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "command_words",
+      "name_en": "Command word: show that",
+      "name_ko_optional": null,
+      "description": "Understand that the target result is given and the task is to justify it through clear working.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "exam.command_hence",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "command_words",
+      "name_en": "Command word: hence",
+      "name_ko_optional": null,
+      "description": "Use a previous result to complete the next step rather than starting from an unrelated method.",
+      "prerequisites": [
+        "exam.command_show_that"
+      ],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "strategy_selection_error"
+      ]
+    },
+    {
+      "id": "exam.command_sketch",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "command_words",
+      "name_en": "Command word: sketch",
+      "name_ko_optional": null,
+      "description": "Draw the important shape and features without needing exact plotting for every point.",
+      "prerequisites": [
+        "coord.cartesian_coordinates"
+      ],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "exam.command_interpret",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "command_words",
+      "name_en": "Command word: interpret",
+      "name_ko_optional": null,
+      "description": "Translate a mathematical result back into the context of the question.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "problem_interpretation_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "exam.required_form",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "answer_format",
+      "name_en": "Required answer form",
+      "name_ko_optional": null,
+      "description": "Notice whether the answer must be factorised, simplified, exact, rounded, or written in terms of a variable.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "checking_finalization_error",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "exam.rounding_units",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "answer_format",
+      "name_en": "Rounding, units, and accuracy",
+      "name_ko_optional": null,
+      "description": "Apply required rounding, significant figures, decimal places, and units in final answers.",
+      "prerequisites": [
+        "num.integer_arithmetic"
+      ],
+      "diagnostic_focus": [
+        "checking_finalization_error",
+        "calculation_error"
+      ]
+    },
+    {
+      "id": "exam.working_marks",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "exam_strategy",
+      "name_en": "Working marks and method visibility",
+      "name_ko_optional": null,
+      "description": "Write enough intermediate working to show method and recover marks if the final answer is wrong.",
+      "prerequisites": [],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "checking_finalization_error"
+      ]
+    },
+    {
+      "id": "exam.calculator_allowed_strategy",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "exam_strategy",
+      "name_en": "Calculator-allowed strategy",
+      "name_ko_optional": null,
+      "description": "Use calculator access wisely while still showing algebraic working clearly for Edexcel 4MA1 Higher marks.",
+      "prerequisites": [
+        "num.squares_roots",
+        "alg.collect_like_terms"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "time_pressure_error"
+      ]
+    },
+    {
+      "id": "notation.igcse_quadratic_forms",
+      "type": "exam_literacy",
+      "tier": "extended",
+      "strand": "notation",
+      "name_en": "IGCSE quadratic notation",
+      "name_ko_optional": null,
+      "description": "Use and recognise y = ax^2 + bx + c, ax^2 + bx + c = 0, factorised form, and completed-square form.",
+      "prerequisites": [
+        "quad.standard_form"
+      ],
+      "diagnostic_focus": [
+        "checking_finalization_error",
+        "problem_interpretation_error"
+      ]
+    },
+    {
+      "id": "quad.simultaneous_linear_quadratic",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Simultaneous linear and quadratic equations",
+      "name_ko_optional": null,
+      "description": "Solve simultaneous equations where one equation is linear and the other is quadratic.",
+      "prerequisites": [
+        "quad.solve_by_factorising",
+        "graph.roots_intercepts",
+        "alg.linear_equations"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "conceptual_misunderstanding"
+      ],
+      "syllabus_refs": [
+        "2.7D"
+      ],
+      "year10_sequence_band": "stretch"
+    },
+    {
+      "id": "quad.quadratic_inequalities",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "quadratics",
+      "name_en": "Quadratic inequalities",
+      "name_ko_optional": null,
+      "description": "Solve quadratic inequalities in one unknown and represent the solution set on a number line.",
+      "prerequisites": [
+        "quad.solve_by_factorising",
+        "graph.roots_intercepts"
+      ],
+      "diagnostic_focus": [
+        "strategy_selection_error",
+        "checking_finalization_error"
+      ],
+      "syllabus_refs": [
+        "2.8A"
+      ],
+      "year10_sequence_band": "stretch"
+    },
+    {
+      "id": "alg.algebraic_fractions_quadratic",
+      "type": "math_concept",
+      "tier": "extended",
+      "strand": "algebra",
+      "name_en": "Algebraic fractions with quadratic expressions",
+      "name_ko_optional": null,
+      "description": "Manipulate algebraic fractions where the numerator or denominator may be quadratic.",
+      "prerequisites": [
+        "quad.factorise_non_monic",
+        "alg.common_factor_factorising"
+      ],
+      "diagnostic_focus": [
+        "conceptual_misunderstanding",
+        "strategy_selection_error"
+      ],
+      "syllabus_refs": [
+        "2.4C"
+      ],
+      "year10_sequence_band": "stretch"
+    }
+  ],
+  "cross_links": [
+    {
+      "math_node": "quad.factorise_monic",
+      "exam_literacy_nodes": [
+        "exam.required_form",
+        "exam.working_marks",
+        "notation.igcse_quadratic_forms"
+      ],
+      "rationale": "Factorising questions often require a specific final form and visible bracket reasoning."
+    },
+    {
+      "math_node": "quad.solve_by_factorising",
+      "exam_literacy_nodes": [
+        "exam.command_solve",
+        "exam.working_marks",
+        "exam.required_form"
+      ],
+      "rationale": "Students must distinguish factorising an expression from solving an equation."
+    },
+    {
+      "math_node": "quad.quadratic_formula",
+      "exam_literacy_nodes": [
+        "exam.rounding_units",
+        "exam.working_marks",
+        "exam.calculator_allowed_strategy"
+      ],
+      "rationale": "Formula work is vulnerable to sign errors, rounding mistakes, and missing method marks."
+    },
+    {
+      "math_node": "quad.completing_square",
+      "exam_literacy_nodes": [
+        "exam.command_show_that",
+        "exam.command_hence",
+        "notation.igcse_quadratic_forms"
+      ],
+      "rationale": "Completing-square tasks often appear as guided show-that or hence questions."
+    },
+    {
+      "math_node": "graph.quadratic_shape",
+      "exam_literacy_nodes": [
+        "exam.command_sketch",
+        "notation.igcse_quadratic_forms"
+      ],
+      "rationale": "Sketching quadratics requires key features, not just a plotted curve."
+    },
+    {
+      "math_node": "graph.roots_intercepts",
+      "exam_literacy_nodes": [
+        "exam.command_interpret",
+        "exam.required_form"
+      ],
+      "rationale": "Intercepts must be connected to roots and context when asked to interpret."
+    },
+    {
+      "math_node": "quad.word_problem_modeling",
+      "exam_literacy_nodes": [
+        "exam.command_interpret",
+        "exam.required_form",
+        "exam.rounding_units"
+      ],
+      "rationale": "Context questions combine model setup, interpretation, units, and final-form constraints."
+    }
+  ],
+  "recommended_core_path": [
+    "num.integer_arithmetic",
+    "num.negative_numbers",
+    "alg.variables_expressions",
+    "alg.collect_like_terms",
+    "alg.expand_single_bracket",
+    "alg.expand_double_brackets",
+    "quad.standard_form",
+    "quad.factorise_monic",
+    "quad.solve_by_factorising",
+    "quad.quadratic_formula",
+    "quad.completing_square",
+    "graph.quadratic_shape",
+    "graph.roots_intercepts",
+    "graph.turning_point_symmetry",
+    "quad.method_selection",
+    "quad.word_problem_modeling"
+  ],
+  "repair_entry_points": [
+    {
+      "trigger": "sign error while expanding or factorising",
+      "repair_nodes": [
+        "num.negative_numbers",
+        "alg.expand_single_bracket",
+        "alg.expand_double_brackets"
+      ]
+    },
+    {
+      "trigger": "combines unlike terms or loses a term",
+      "repair_nodes": [
+        "alg.variables_expressions",
+        "alg.collect_like_terms"
+      ]
+    },
+    {
+      "trigger": "factorises correctly but does not solve",
+      "repair_nodes": [
+        "exam.command_solve",
+        "quad.solve_by_factorising"
+      ]
+    },
+    {
+      "trigger": "correct mathematics but wrong final form",
+      "repair_nodes": [
+        "exam.required_form",
+        "notation.igcse_quadratic_forms"
+      ]
+    },
+    {
+      "trigger": "graph answer lacks roots, turning point, or symmetry",
+      "repair_nodes": [
+        "exam.command_sketch",
+        "graph.quadratic_shape",
+        "graph.turning_point_symmetry"
+      ]
+    },
+    {
+      "trigger": "word problem setup fails",
+      "repair_nodes": [
+        "exam.command_interpret",
+        "quad.word_problem_modeling",
+        "alg.rearranging_formulae"
+      ]
+    }
+  ],
+  "validation_notes": {
+    "dag_status": "Intended acyclic. Validate by checking that no node appears in its own prerequisite chain.",
+    "id_policy": "Stable lowercase dotted identifiers. C-002 item schema should validate references against these ids.",
+    "next_review": "Opus should review prerequisite completeness, tier split, and whether the graph is too broad for the first 20-item MVP."
+  }
+}

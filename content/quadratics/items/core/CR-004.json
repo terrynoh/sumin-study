@@ -1,0 +1,98 @@
+{
+  "id": "CR-004",
+  "title": "Negative numbers: different signs make negative",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-003",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-003 Q003_MIXED_SIGN_SELECTION. Atomicity=num.negative_numbers; Scenario=Called by Q-003 Q003_MIXED_SIGN_SELECTION; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Choose the signs: two numbers multiply to a negative number and add to a positive number.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "larger number positive",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "num.negative_numbers"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "num.integer_arithmetic",
+    "quad.factorise_monic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR004_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "smaller number positive",
+      "expected_step_number": 1,
+      "diagnostic_target": "mixed_sign_choice",
+      "diagnostic_sentence": "If the smaller number is made positive, the product condition is handled but the sum sign is reversed. Mixed-sign factor pairs need a size check as well as a sign check.",
+      "repair_node_ids": [
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Opposite signs",
+      "prompt": "A negative product means the two signs are different. The positive sum tells you which number should carry the positive sign."
+    },
+    {
+      "level": 2,
+      "title": "Larger value",
+      "prompt": "With different signs, compare sizes. The larger absolute value controls whether the final sum is positive or negative."
+    },
+    {
+      "level": 3,
+      "title": "Sign placement",
+      "prompt": "A common slip is making the smaller number positive, which makes the sum negative instead of positive."
+    },
+    {
+      "level": 4,
+      "title": "Mixed-sign rule",
+      "prompt": "For a negative product, use opposite signs; for the sum sign, give the larger number that sign. Apply it here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "mixed_sign_choice",
+      "expression": "larger number positive",
+      "diagnostic_target": "mixed_sign_choice",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on deciding which of the two opposite-signed numbers controls the sign of the final sum."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: num.negative_numbers. Scenario: Called by Q-003 Q003_MIXED_SIGN_SELECTION. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak mixed sign choice control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: number fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

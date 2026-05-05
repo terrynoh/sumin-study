@@ -1,0 +1,100 @@
+{
+  "id": "CR-021",
+  "title": "Cartesian coordinates: read an intercept",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-018 Q018_Y_INTERCEPT; Called by Q-019 Q019_SKETCH_MISSING_FEATURES. Atomicity=coord.cartesian_coordinates; Scenario=Called by Q-018 Q018_Y_INTERCEPT; Called by Q-019 Q019_SKETCH_MISSING_FEATURES; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "A graph crosses the y-axis at (0, -5). What is the y-intercept?",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "-5",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "coord.cartesian_coordinates"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks",
+    "exam.command_sketch"
+  ],
+  "prerequisite_ids": [
+    "num.negative_numbers",
+    "graph.roots_intercepts",
+    "graph.quadratic_shape"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR021_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "y-intercept 0",
+      "expected_step_number": 1,
+      "diagnostic_target": "coordinate_intercept",
+      "diagnostic_sentence": "If the answer is 0, the issue is reading the x-coordinate instead of the y-value. Graph questions need intercepts interpreted from coordinates, not just axis labels.",
+      "repair_node_ids": [
+        "coord.cartesian_coordinates"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Y-axis meaning",
+      "prompt": "The y-intercept is the y-value where the graph crosses the y-axis."
+    },
+    {
+      "level": 2,
+      "title": "Read the coordinate",
+      "prompt": "For a point on the y-axis, read the second coordinate as the intercept value. The first coordinate only tells you it is on the axis."
+    },
+    {
+      "level": 3,
+      "title": "Coordinate choice",
+      "prompt": "A common slip is giving 0 because the point is on the y-axis. The intercept value is the y-coordinate."
+    },
+    {
+      "level": 4,
+      "title": "Intercept routine",
+      "prompt": "For a y-intercept, find the point with x = 0 and read the y-value. Use this coordinate; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "coordinate_intercept",
+      "expression": "-5",
+      "diagnostic_target": "coordinate_intercept",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on reading the second coordinate as the y-intercept when the point lies on the y-axis."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: coord.cartesian_coordinates. Scenario: Called by Q-018 Q018_Y_INTERCEPT; Called by Q-019 Q019_SKETCH_MISSING_FEATURES. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak coordinate intercept control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: coordinate geometry"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

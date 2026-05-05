@@ -1,0 +1,97 @@
+{
+  "id": "CR-015",
+  "title": "Rearranging formulae: isolate a variable",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-015 Q015_SETUP_ADD_INSTEAD_MULTIPLY. Atomicity=alg.rearranging_formulae; Scenario=Called by Q-015 Q015_SETUP_ADD_INSTEAD_MULTIPLY; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Make x the subject of x + 5 = 12.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x = 7",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.rearranging_formulae"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.linear_equations",
+    "quad.word_problem_modeling"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR015_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x = 17",
+      "expected_step_number": 1,
+      "diagnostic_target": "isolate_variable",
+      "diagnostic_sentence": "If 5 is added again instead of subtracted, the issue is choosing the inverse operation while isolating a variable. Rearranging word-problem equations needs this control.",
+      "repair_node_ids": [
+        "alg.rearranging_formulae"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Subject meaning",
+      "prompt": "Making x the subject means ending with x alone on one side of the equation."
+    },
+    {
+      "level": 2,
+      "title": "Undo plus five",
+      "prompt": "The x has 5 added to it, so use the inverse operation on both sides."
+    },
+    {
+      "level": 3,
+      "title": "Balance both sides",
+      "prompt": "A common slip is changing one side only. Whatever you subtract from the left must also be subtracted from the right."
+    },
+    {
+      "level": 4,
+      "title": "Subject routine",
+      "prompt": "Identify what is attached to x, undo it on both sides, and leave x alone. Use this equation; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "isolate_variable",
+      "expression": "x = 7",
+      "diagnostic_target": "isolate_variable",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on isolating x by applying the same inverse operation to both sides of the equation."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.rearranging_formulae. Scenario: Called by Q-015 Q015_SETUP_ADD_INSTEAD_MULTIPLY. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak isolate variable control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "CR-024",
+  "title": "Expand two brackets: mixed signs",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, where will the sign checks happen?",
+  "transfer_variation_of": "CR-023",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "ACADEMIC-FILTER-CR-additions",
+    "notes": "Called by Q-006 Q006_MIDDLE_TERM_CHECK. Atomicity=alg.expand_double_brackets; Scenario=Called by Q-006 Q006_MIDDLE_TERM_CHECK; Surface variation=yes; No new vocab=yes; Steps=1-2. Added after academic validation."
+  },
+  "problem_text": "Expand (x - 3)(x + 4).",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "x^2 + x - 12",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "expanded_form",
+  "concept_ids": [
+    "alg.expand_double_brackets"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "alg.expand_single_bracket",
+    "alg.collect_like_terms",
+    "num.negative_numbers"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR024_SIGNED_MIDDLE_PRODUCTS",
+      "category": "sign_error",
+      "trigger": "x^2 - x - 12",
+      "expected_step_number": 1,
+      "diagnostic_target": "signed_middle_terms",
+      "diagnostic_sentence": "If the x term has the opposite sign, the next link is checking the signs of the two middle products before collecting.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets",
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Keep the signs",
+      "prompt": "The two middle products have signs. Track them separately before collecting."
+    },
+    {
+      "level": 2,
+      "title": "Middle products",
+      "prompt": "Find x times 4, then -3 times x. These are the two terms that combine into the x term."
+    },
+    {
+      "level": 3,
+      "title": "Sign-link check",
+      "prompt": "The sign of the final x term depends on which middle product has the larger magnitude."
+    },
+    {
+      "level": 4,
+      "title": "Signed expansion routine",
+      "prompt": "Write all four products with signs, then collect the two x terms. Apply that routine here."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "expand mixed-sign brackets",
+      "expression": "x^2 + 4x - 3x - 12 = x^2 + x - 12",
+      "diagnostic_target": "signed_middle_terms",
+      "common_errors": [
+        "x^2 - x - 12",
+        "changes the sign of one middle product"
+      ],
+      "diagnostic_sentence": "This repair focuses on keeping both middle-product signs visible before collecting them."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.expand_double_brackets. Scenario: Called by Q-006 Q006_MIDDLE_TERM_CHECK. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational pattern: bracket expansion signs change during middle-term collection.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "sign_change",
+    "method_choice"
+  ]
+}

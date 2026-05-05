@@ -1,0 +1,103 @@
+{
+  "id": "CR-022",
+  "title": "Table of values: generate a point",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-021",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-020 Q020_MAXIMUM_CONTEXT; Called by Q-011 Q011_TURNING_POINT_SIGN. Atomicity=graph.table_of_values; Scenario=Called by Q-020 Q020_MAXIMUM_CONTEXT; Called by Q-011 Q011_TURNING_POINT_SIGN; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "For y = x^2 + 1, find y when x = 2.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "5",
+  "marks": 1,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "graph.table_of_values"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks",
+    "exam.command_interpret",
+    "exam.rounding_units"
+  ],
+  "prerequisite_ids": [
+    "alg.substitution",
+    "coord.cartesian_coordinates",
+    "graph.quadratic_shape",
+    "graph.turning_point_symmetry",
+    "quad.completing_square",
+    "quad.word_problem_modeling"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR022_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "y = 3",
+      "expected_step_number": 1,
+      "diagnostic_target": "table_value",
+      "diagnostic_sentence": "If y is found as 3, the next link is treating x squared carefully and keeping the operation order. Table values for quadratic graphs need substitution plus order control.",
+      "repair_node_ids": [
+        "graph.table_of_values"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Table value",
+      "prompt": "A table value comes from substituting the given x into the formula for y."
+    },
+    {
+      "level": 2,
+      "title": "Square first",
+      "prompt": "For x = 2, calculate 2 squared first, then add 1."
+    },
+    {
+      "level": 3,
+      "title": "Operation order",
+      "prompt": "A common slip is doing 2 + 1 before squaring, or forgetting that x^2 means x times x."
+    },
+    {
+      "level": 4,
+      "title": "Table routine",
+      "prompt": "Substitute the x-value, follow powers before addition, and record the resulting y-value. Use this formula; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "table_value",
+      "expression": "5",
+      "diagnostic_target": "table_value",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on substituting x = 2 and applying the square before adding the constant."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: graph.table_of_values. Scenario: Called by Q-020 Q020_MAXIMUM_CONTEXT; Called by Q-011 Q011_TURNING_POINT_SIGN. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak table value control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: tables and graphs"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

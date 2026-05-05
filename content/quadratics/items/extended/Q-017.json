@@ -1,0 +1,142 @@
+{
+  "id": "Q-017",
+  "title": "Find a missing side using area and a quadratic model",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "A right-angled triangle has base (x + 3) cm and height (x - 1) cm. Its area is 16 cm^2. Form an equation and find x.",
+  "student_prompt": "Use area = 1/2 x base x height.",
+  "expected_answer": "x = 5",
+  "marks": 5,
+  "difficulty": 4,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.word_problem_modeling",
+    "quad.solve_by_factorising"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_solve",
+    "exam.command_interpret",
+    "exam.required_form",
+    "exam.working_marks",
+    "exam.rounding_units"
+  ],
+  "prerequisite_ids": [
+    "alg.expand_double_brackets",
+    "quad.factorise_monic",
+    "alg.linear_equations",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q017_FORGETS_HALF",
+      "category": "problem_interpretation_error",
+      "trigger": "(x + 3)(x - 1) = 16",
+      "expected_step_number": 1,
+      "diagnostic_target": "triangle_area_model",
+      "diagnostic_sentence": "For a triangle, area is half base times height, so include the factor 1/2.",
+      "repair_node_ids": [
+        "quad.word_problem_modeling",
+        "exam.command_interpret"
+      ]
+    },
+    {
+      "code": "Q017_CONTEXT_ROOT",
+      "category": "checking_finalization_error",
+      "trigger": "x = -7",
+      "expected_step_number": 3,
+      "diagnostic_target": "contextual_root_choice",
+      "diagnostic_sentence": "x = -7 makes the side lengths negative, so use x = 5.",
+      "repair_node_ids": [
+        "exam.command_interpret",
+        "exam.required_form"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Which area formula applies?",
+      "prompt": "This is a triangle, so the area formula includes a half. Start with the geometry before doing algebra."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Put the base and height expressions into the triangle area formula, then clear the fraction before expanding."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students use the rectangle area formula by accident, or forget to reject a value that makes a side length impossible."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For geometry modelling, choose the correct formula, substitute algebraic side expressions, solve the resulting quadratic, and check the context. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "form triangle area equation",
+      "expression": "1/2 (x + 3)(x - 1) = 16",
+      "diagnostic_target": "triangle_area_model",
+      "common_errors": [
+        "forgets the half",
+        "uses perimeter"
+      ],
+      "diagnostic_sentence": "The stuck point is applying the triangle area formula."
+    },
+    {
+      "step_number": 2,
+      "action": "clear fraction and rearrange",
+      "expression": "(x + 3)(x - 1) = 32, so x^2 + 2x - 35 = 0",
+      "diagnostic_target": "quadratic_model_rearrangement",
+      "common_errors": [
+        "does not multiply both sides by 2",
+        "expands incorrectly"
+      ],
+      "diagnostic_sentence": "The stuck point is clearing the half and rearranging."
+    },
+    {
+      "step_number": 3,
+      "action": "solve",
+      "expression": "x = 5",
+      "diagnostic_target": "contextual_root_choice",
+      "common_errors": [
+        "chooses negative x",
+        "does not check side lengths"
+      ],
+      "diagnostic_sentence": "The stuck point is solving and checking x in the geometry context."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for triangle area equation, clearing the half, rearranging, factorising, and contextual value.",
+  "examiner_report_notes": "Likely errors: forgetting the 1/2 factor and failing to reject a negative side length.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, which area formula applies to this shape?",
+  "transfer_variation_of": "Q-015",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7C",
+    "2.7A"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "transfer",
+  "transfer_axis": [
+    "sign_change",
+    "context_change",
+    "method_choice"
+  ]
+}

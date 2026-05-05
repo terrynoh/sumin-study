@@ -1,0 +1,145 @@
+{
+  "id": "Q-020",
+  "title": "Interpret a quadratic graph in context",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "The height h metres of a ball t seconds after it is thrown is modelled by h = -t^2 + 6t + 7. Find the maximum height of the ball and the time when this happens.",
+  "student_prompt": "Use completed-square form or another clear method.",
+  "expected_answer": "Maximum height 16 m at t = 3 s",
+  "marks": 5,
+  "difficulty": 4,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "completed_square_form",
+  "concept_ids": [
+    "quad.word_problem_modeling",
+    "graph.turning_point_symmetry",
+    "quad.completing_square"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_interpret",
+    "exam.rounding_units",
+    "exam.required_form",
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "quad.completing_square",
+    "graph.quadratic_shape",
+    "num.negative_numbers",
+    "exam.command_interpret"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q020_MAXIMUM_CONTEXT",
+      "category": "problem_interpretation_error",
+      "trigger": "minimum",
+      "expected_step_number": 3,
+      "diagnostic_target": "contextual_turning_point",
+      "diagnostic_sentence": "Because the coefficient of t^2 is negative, the turning point is a maximum, not a minimum.",
+      "repair_node_ids": [
+        "graph.quadratic_shape",
+        "exam.command_interpret"
+      ]
+    },
+    {
+      "code": "Q020_COMPLETING_NEGATIVE_QUAD",
+      "category": "sign_error",
+      "trigger": "-(t + 3)^2",
+      "expected_step_number": 1,
+      "diagnostic_target": "completing_square_negative_leading",
+      "diagnostic_sentence": "Factor out the negative first: h = -(t^2 - 6t) + 7, so the square involves (t - 3)^2.",
+      "repair_node_ids": [
+        "quad.completing_square",
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does the context ask for?",
+      "prompt": "Maximum height corresponds to the turning point of a downward-opening quadratic. Think about the graph shape before calculating."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Because the squared term has a negative coefficient, factor that negative before completing the square."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students complete the square as if the leading coefficient were positive, or identify the turning point but do not translate it into time and height."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For h = -t^2 + bt + c, complete the square by handling the negative leading term, then interpret the turning point as time and height. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "factor out negative and complete the square",
+      "expression": "h = -(t - 3)^2 + 16",
+      "diagnostic_target": "completing_square_negative_leading",
+      "common_errors": [
+        "uses (t + 3)^2",
+        "does not factor out the negative"
+      ],
+      "diagnostic_sentence": "The stuck point is completing the square when the t^2 coefficient is negative."
+    },
+    {
+      "step_number": 2,
+      "action": "identify turning point",
+      "expression": "(3, 16)",
+      "diagnostic_target": "turning_point_from_completed_square",
+      "common_errors": [
+        "writes (-3, 16)",
+        "writes (3, -16)"
+      ],
+      "diagnostic_sentence": "The stuck point is reading the turning point from completed-square form."
+    },
+    {
+      "step_number": 3,
+      "action": "interpret in context",
+      "expression": "maximum height 16 m at 3 s",
+      "diagnostic_target": "contextual_turning_point",
+      "common_errors": [
+        "calls it a minimum",
+        "omits units or time"
+      ],
+      "diagnostic_sentence": "The stuck point is interpreting the turning point in the context of the ball's height."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for completed-square form or equivalent turning point method, maximum height, time, and units.",
+  "examiner_report_notes": "Likely errors: mishandling the negative leading coefficient and not interpreting the turning point in context.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, how does the negative coefficient affect the graph shape?",
+  "transfer_variation_of": "Q-018",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7C",
+    "3.3",
+    "2.4D",
+    "2.7B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "sign_change",
+    "context_change",
+    "representation_change",
+    "method_choice"
+  ]
+}

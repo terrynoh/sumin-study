@@ -1,0 +1,98 @@
+{
+  "id": "CR-007",
+  "title": "Variables and expressions: identify terms",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-012 Q012_WRONG_COEFFICIENTS. Atomicity=alg.variables_expressions; Scenario=Called by Q-012 Q012_WRONG_COEFFICIENTS; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "In 4x^2 - 3x + 8, name the coefficient of x.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "-3",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "alg.variables_expressions"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "num.integer_arithmetic",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR007_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "coefficient 3",
+      "expected_step_number": 1,
+      "diagnostic_target": "coefficient_identification",
+      "diagnostic_sentence": "If the answer is 3 instead of -3, the issue is reading a coefficient without its sign. Quadratic formula and standard form work both depend on signed coefficients.",
+      "repair_node_ids": [
+        "alg.variables_expressions"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Coefficient meaning",
+      "prompt": "The coefficient of x is the number multiplying the x term. Look only at the term with x to the first power."
+    },
+    {
+      "level": 2,
+      "title": "Separate terms",
+      "prompt": "Split the expression into its three terms first. Then choose the signed number attached to the first-power x term."
+    },
+    {
+      "level": 3,
+      "title": "Keep the sign",
+      "prompt": "A common slip is saying 3 and dropping the negative sign. The sign belongs to the coefficient."
+    },
+    {
+      "level": 4,
+      "title": "Term-reading routine",
+      "prompt": "For coefficients, identify the exact term first, then read the signed number attached to it. Use this expression; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "coefficient_identification",
+      "expression": "-3",
+      "diagnostic_target": "coefficient_identification",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on identifying the x term and carrying its negative sign into the coefficient."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: alg.variables_expressions. Scenario: Called by Q-012 Q012_WRONG_COEFFICIENTS. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak coefficient identification control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: algebra fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

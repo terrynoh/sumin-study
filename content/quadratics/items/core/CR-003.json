@@ -1,0 +1,99 @@
+{
+  "id": "CR-003",
+  "title": "Negative numbers: same signs make positive",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": null,
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-002 Q002_SIGN_PAIR; Called by Q-005 Q005_FACTOR_SIGNS; Called by Q-012 Q012_DISCRIMINANT_SIGN. Atomicity=num.negative_numbers; Scenario=Called by Q-002 Q002_SIGN_PAIR; Called by Q-005 Q005_FACTOR_SIGNS; Called by Q-012 Q012_DISCRIMINANT_SIGN; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Choose the signs: two numbers multiply to a positive number and add to a negative number.",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "both negative",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "num.negative_numbers"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "num.integer_arithmetic",
+    "quad.factorise_monic",
+    "quad.factorise_non_monic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR003_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "both positive",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_pair_signs",
+      "diagnostic_sentence": "If you choose both positive, you know the product rule but not the sum-direction check. Factorising quadratics with negative middle terms depends on combining both sign clues.",
+      "repair_node_ids": [
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Sign meaning",
+      "prompt": "A positive product means the two signs are the same. A negative sum then tells you which same-sign pair is needed."
+    },
+    {
+      "level": 2,
+      "title": "Same signs",
+      "prompt": "The signs could both be positive or both be negative for a positive product. Check the sum direction next."
+    },
+    {
+      "level": 3,
+      "title": "Sum direction",
+      "prompt": "A common slip is stopping at same signs. If the sum is negative, both numbers need to point negative."
+    },
+    {
+      "level": 4,
+      "title": "Sign rule",
+      "prompt": "For a positive product, choose same signs; for the sum direction, choose positive or negative. Apply both checks here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "negative_pair_signs",
+      "expression": "both negative",
+      "diagnostic_target": "negative_pair_signs",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on using the product sign without also using the sign of the sum to decide whether the pair should be positive or negative."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: num.negative_numbers. Scenario: Called by Q-002 Q002_SIGN_PAIR; Called by Q-005 Q005_FACTOR_SIGNS; Called by Q-012 Q012_DISCRIMINANT_SIGN. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak negative pair signs control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: number fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice",
+    "sign_change"
+  ]
+}

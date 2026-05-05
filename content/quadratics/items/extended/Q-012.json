@@ -1,0 +1,137 @@
+{
+  "id": "Q-012",
+  "title": "Solve using the quadratic formula with exact roots",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Solve 2x^2 + 3x - 2 = 0 using the quadratic formula.",
+  "student_prompt": "Show substitution into the formula.",
+  "expected_answer": "x = 1/2 or x = -2",
+  "marks": 4,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "quad.quadratic_formula"
+  ],
+  "exam_literacy_ids": [
+    "exam.command_solve",
+    "exam.working_marks",
+    "exam.required_form"
+  ],
+  "prerequisite_ids": [
+    "quad.standard_form",
+    "alg.substitution",
+    "num.negative_numbers",
+    "num.squares_roots"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q012_WRONG_COEFFICIENTS",
+      "category": "problem_interpretation_error",
+      "trigger": "a = 3",
+      "expected_step_number": 1,
+      "diagnostic_target": "coefficient_identification",
+      "diagnostic_sentence": "Identify coefficients from ax^2 + bx + c: here a = 2, b = 3, c = -2.",
+      "repair_node_ids": [
+        "quad.standard_form",
+        "alg.substitution"
+      ]
+    },
+    {
+      "code": "Q012_DISCRIMINANT_SIGN",
+      "category": "sign_error",
+      "trigger": "9 - 16",
+      "expected_step_number": 2,
+      "diagnostic_target": "formula_substitution",
+      "diagnostic_sentence": "Because c = -2, the term -4ac becomes -4(2)(-2), which is positive.",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.quadratic_formula"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What must be identified first?",
+      "prompt": "The quadratic formula depends on a, b, and c from standard form. Before calculating, identify each coefficient carefully."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Write the formula structure and substitute the three coefficients, paying special attention to any negative signs."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "When c is negative, check the sign of the -4ac part before simplifying the discriminant."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For ax^2 + bx + c = 0, use x = (-b ? sqrt(b^2 - 4ac)) / 2a. Substitute symbols first, then simplify. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "identify coefficients",
+      "expression": "a = 2, b = 3, c = -2",
+      "diagnostic_target": "coefficient_identification",
+      "common_errors": [
+        "takes b as 2",
+        "drops the negative sign on c"
+      ],
+      "diagnostic_sentence": "The stuck point is identifying a, b, and c correctly."
+    },
+    {
+      "step_number": 2,
+      "action": "substitute into formula",
+      "expression": "x = (-3 ± sqrt(3^2 - 4(2)(-2))) / 4",
+      "diagnostic_target": "formula_substitution",
+      "common_errors": [
+        "uses 9 - 16",
+        "writes denominator as 2"
+      ],
+      "diagnostic_sentence": "The stuck point is substituting signs and denominator into the formula."
+    },
+    {
+      "step_number": 3,
+      "action": "simplify roots",
+      "expression": "x = 1/2 or x = -2",
+      "diagnostic_target": "root_simplification",
+      "common_errors": [
+        "does not simplify fractions",
+        "gives one root"
+      ],
+      "diagnostic_sentence": "The stuck point is simplifying both formula results."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award marks for coefficients, formula substitution, discriminant, and both roots.",
+  "examiner_report_notes": "Likely errors: sign error in -4ac and denominator 2a.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what are a, b, and c?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.7B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "sign_change",
+    "method_choice"
+  ]
+}

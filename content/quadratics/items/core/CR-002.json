@@ -1,0 +1,96 @@
+{
+  "id": "CR-002",
+  "title": "Integer arithmetic: compare candidate pairs",
+  "tier": "core_repair",
+  "status": "active",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what single skill is this repair problem checking?",
+  "transfer_variation_of": "CR-001",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch-original",
+    "notes": "Called by Q-001 Q001_PAIR_SUM_PRODUCT. Atomicity=num.integer_arithmetic; Scenario=Called by Q-001 Q001_PAIR_SUM_PRODUCT; Surface variation=yes; No new vocab=yes; Steps=1-2. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Which pair has product 18 and sum 9: 2 and 9, or 3 and 6?",
+  "student_prompt": "Answer this short repair question. Keep your working brief.",
+  "expected_answer": "3 and 6",
+  "marks": 1,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "edexcel_standard",
+  "concept_ids": [
+    "num.integer_arithmetic"
+  ],
+  "exam_literacy_ids": [
+    "exam.working_marks"
+  ],
+  "prerequisite_ids": [
+    "quad.factorise_monic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "CR002_CORE_SKILL",
+      "category": "conceptual_misunderstanding",
+      "trigger": "2 and 9",
+      "expected_step_number": 1,
+      "diagnostic_target": "candidate_pair_check",
+      "diagnostic_sentence": "If 2 and 9 looks correct too quickly, the issue is checking only one condition. Quadratic factorising needs both the product and middle-term sum to be true.",
+      "repair_node_ids": [
+        "num.integer_arithmetic"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "Check each pair",
+      "prompt": "The question gives two candidate pairs. Test the product and the sum for each pair instead of choosing by sight."
+    },
+    {
+      "level": 2,
+      "title": "Multiply first",
+      "prompt": "For each candidate pair, calculate the product and the sum in a small table. Choose only the pair that passes both checks."
+    },
+    {
+      "level": 3,
+      "title": "Looks plausible",
+      "prompt": "A pair can match one condition without matching the whole question. Check product 18 and sum 9 before choosing."
+    },
+    {
+      "level": 4,
+      "title": "Candidate routine",
+      "prompt": "When candidates are provided, make a two-column product/sum check for each option. Use the numbers here; do not copy."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "candidate_pair_check",
+      "expression": "3 and 6",
+      "diagnostic_target": "candidate_pair_check",
+      "common_errors": [
+        "not sure",
+        "uses the previous larger problem instead of this repair skill"
+      ],
+      "diagnostic_sentence": "This repair focuses on comparing candidate pairs systematically, not just recognising one pair that seems related to the numbers in the question."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Atomicity: num.integer_arithmetic. Scenario: Called by Q-001 Q001_PAIR_SUM_PRODUCT. Surface variation: yes. No new vocab: yes. Single-step or two-step: yes.",
+  "examiner_report_notes": "Common foundational error: weak candidate pair check control during quadratic repair.",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "foundation_prerequisite_repair",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "Foundation assumed knowledge: number fluency"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "prerequisite_repair",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

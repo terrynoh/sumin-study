@@ -1,0 +1,125 @@
+{
+  "id": "Q-003",
+  "title": "Factorise a monic quadratic with mixed signs",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch1-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise x^2 + x - 12.",
+  "student_prompt": "Show your working and give your answer in factorised form.",
+  "expected_answer": "(x + 4)(x - 3)",
+  "marks": 2,
+  "difficulty": 2,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "factorised_form",
+  "concept_ids": [
+    "quad.factorise_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "num.negative_numbers",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q003_MIXED_SIGN_SELECTION",
+      "category": "sign_error",
+      "trigger": "x - 4",
+      "expected_step_number": 1,
+      "diagnostic_target": "mixed_sign_factor_pair",
+      "diagnostic_sentence": "The numbers 4 and 3 are right, but the larger number must be positive so the sum is +1.",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.factorise_monic"
+      ]
+    },
+    {
+      "code": "Q003_MIDDLE_TERM_MISSING",
+      "category": "checking_finalization_error",
+      "trigger": "x^2 - 12",
+      "expected_step_number": 2,
+      "diagnostic_target": "expansion_check",
+      "diagnostic_sentence": "Your brackets give the constant term but lose the middle x term. Check the two inside/outside products.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets",
+        "alg.collect_like_terms"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does a negative constant imply?",
+      "prompt": "A negative constant in a monic quadratic means the bracket constants have opposite signs. Think about which sign should go with the larger magnitude."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Find factor pairs for the absolute value of the constant, then choose signs so the middle term has the correct direction."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students get the two magnitudes right but reverse the signs. Check whether your bracket pair creates the stated middle term."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For x^2 + bx - c, use opposite signs. The larger magnitude controls the sign of the middle term. Apply this pattern to your expression; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "choose mixed-sign factor pair",
+      "expression": "4 and -3 multiply to -12 and add to 1",
+      "diagnostic_target": "mixed_sign_factor_pair",
+      "common_errors": [
+        "chooses -4 and 3",
+        "chooses 6 and -2 because the product is correct"
+      ],
+      "diagnostic_sentence": "The stuck point is choosing which factor should be positive and which should be negative."
+    },
+    {
+      "step_number": 2,
+      "action": "write factorised form",
+      "expression": "(x + 4)(x - 3)",
+      "diagnostic_target": "expansion_check",
+      "common_errors": [
+        "writes (x - 4)(x + 3)",
+        "does not check the middle term"
+      ],
+      "diagnostic_sentence": "The stuck point is checking that the middle term is +x, not -x."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award 1 mark for identifying 4 and -3; 1 mark for the correct factorised expression.",
+  "examiner_report_notes": "Common errors expected: reversed signs, product-only checking, missing verification of the middle term.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, how will you decide which factor is positive?",
+  "transfer_variation_of": "Q-001",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "sign_change"
+  ]
+}

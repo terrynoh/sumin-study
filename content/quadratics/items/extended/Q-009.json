@@ -1,0 +1,126 @@
+{
+  "id": "Q-009",
+  "title": "Complete the square for a simple monic quadratic",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch2-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Write x^2 + 6x + 11 in the form (x + a)^2 + b.",
+  "student_prompt": "Show your working.",
+  "expected_answer": "(x + 3)^2 + 2",
+  "marks": 3,
+  "difficulty": 3,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "completed_square_form",
+  "concept_ids": [
+    "quad.completing_square"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "quad.standard_form",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "num.integer_arithmetic"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q009_HALVE_COEFFICIENT",
+      "category": "conceptual_misunderstanding",
+      "trigger": "x + 6",
+      "expected_step_number": 1,
+      "diagnostic_target": "halving_middle_coefficient",
+      "diagnostic_sentence": "To complete the square, halve the coefficient of x. Half of 6 is 3, not 6.",
+      "repair_node_ids": [
+        "quad.completing_square",
+        "alg.expand_double_brackets"
+      ]
+    },
+    {
+      "code": "Q009_CONSTANT_ADJUSTMENT",
+      "category": "calculation_error",
+      "trigger": "+ 11 - 9",
+      "expected_step_number": 2,
+      "diagnostic_target": "constant_adjustment",
+      "diagnostic_sentence": "(x + 3)^2 already includes +9, so compare 11 with 9 to get +2 outside the bracket.",
+      "repair_node_ids": [
+        "quad.completing_square",
+        "num.integer_arithmetic"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What does completed-square form reveal?",
+      "prompt": "You are trying to rewrite the quadratic as one squared bracket plus an outside adjustment. Focus on the coefficient of x."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Start by halving the coefficient of x to decide what goes inside the bracket. Do not use the full coefficient."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students form the squared bracket but forget that expanding it changes the constant term. The outside number repairs that change."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "For x^2 + bx + c, use (x + b/2)^2, then adjust the outside constant so the expanded expression would match the original. Apply this pattern; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "halve the x coefficient",
+      "expression": "6 / 2 = 3",
+      "diagnostic_target": "halving_middle_coefficient",
+      "common_errors": [
+        "uses 6 instead of 3",
+        "halves the constant"
+      ],
+      "diagnostic_sentence": "The stuck point is halving the x coefficient."
+    },
+    {
+      "step_number": 2,
+      "action": "adjust the constant",
+      "expression": "x^2 + 6x + 11 = (x + 3)^2 + 2",
+      "diagnostic_target": "constant_adjustment",
+      "common_errors": [
+        "forgets to adjust the constant",
+        "subtracts instead of adding 2"
+      ],
+      "diagnostic_sentence": "The stuck point is adjusting the constant after forming the square."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award 1 mark for (x+3)^2 structure, 1 mark for constant adjustment, 1 mark for correct completed-square form.",
+  "examiner_report_notes": "Likely errors: using the full x coefficient, no constant adjustment.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what kind of form is the question asking you to create?",
+  "transfer_variation_of": null,
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4D",
+    "2.7B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "stretch",
+  "transfer_axis": [
+    "method_choice"
+  ]
+}

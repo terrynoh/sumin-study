@@ -1,0 +1,125 @@
+{
+  "id": "Q-002",
+  "title": "Factorise a monic quadratic with negative middle coefficient",
+  "tier": "extended",
+  "status": "active",
+  "source_reference": {
+    "source_type": "edexcel_style_original",
+    "source_id": "EDEXCEL-PIVOT-batch1-original",
+    "notes": "Original Edexcel 4MA1 Higher-style item for the Year 10 quadratics MVP. Edexcel pivot metadata applied."
+  },
+  "problem_text": "Factorise x^2 - 7x + 10.",
+  "student_prompt": "Show your working and give your answer in factorised form.",
+  "expected_answer": "(x - 5)(x - 2)",
+  "marks": 2,
+  "difficulty": 1,
+  "calculator_policy": "calculator_allowed",
+  "notation_style": "factorised_form",
+  "concept_ids": [
+    "quad.factorise_monic"
+  ],
+  "exam_literacy_ids": [
+    "exam.required_form",
+    "exam.working_marks",
+    "notation.igcse_quadratic_forms"
+  ],
+  "prerequisite_ids": [
+    "num.negative_numbers",
+    "alg.expand_double_brackets",
+    "alg.collect_like_terms",
+    "quad.standard_form"
+  ],
+  "error_category_mapping": [
+    {
+      "code": "Q002_SIGN_PAIR",
+      "category": "sign_error",
+      "trigger": "x + 5",
+      "expected_step_number": 1,
+      "diagnostic_target": "negative_factor_pair",
+      "diagnostic_sentence": "The numbers 5 and 2 are right, but both signs must be negative because their product is positive and their sum is -7.",
+      "repair_node_ids": [
+        "num.negative_numbers",
+        "quad.factorise_monic"
+      ]
+    },
+    {
+      "code": "Q002_DROPS_NEGATIVE",
+      "category": "checking_finalization_error",
+      "trigger": "x^2 + 7x + 10",
+      "expected_step_number": 2,
+      "diagnostic_target": "expansion_check",
+      "diagnostic_sentence": "Your check changed -7x into +7x. Expanding the brackets should return the original middle term.",
+      "repair_node_ids": [
+        "alg.expand_double_brackets",
+        "num.negative_numbers"
+      ]
+    }
+  ],
+  "hint_ladder": [
+    {
+      "level": 1,
+      "title": "What do the signs tell you?",
+      "prompt": "This quadratic has a positive constant and a negative middle term. Think about what that means for the signs inside the two brackets."
+    },
+    {
+      "level": 2,
+      "title": "Pick a starting move",
+      "prompt": "Start from factor pairs of the constant term, then decide whether both signs should match or differ."
+    },
+    {
+      "level": 3,
+      "title": "A common slip",
+      "prompt": "Many students find the right magnitudes but forget that a negative middle term changes the bracket signs. Check the product and the sum together."
+    },
+    {
+      "level": 4,
+      "title": "The general pattern",
+      "prompt": "When x^2 + bx + c has c positive, the bracket signs match. The sign of b tells you whether both are positive or both are negative. Apply this pattern to your expression; do not copy an example."
+    }
+  ],
+  "expected_solution_steps": [
+    {
+      "step_number": 1,
+      "action": "choose signed factor pair",
+      "expression": "-5 and -2 multiply to 10 and add to -7",
+      "diagnostic_target": "negative_factor_pair",
+      "common_errors": [
+        "uses +5 and +2",
+        "uses one positive and one negative number"
+      ],
+      "diagnostic_sentence": "The stuck point is deciding the signs of the factor pair."
+    },
+    {
+      "step_number": 2,
+      "action": "write factorised form",
+      "expression": "(x - 5)(x - 2)",
+      "diagnostic_target": "expansion_check",
+      "common_errors": [
+        "writes (x + 5)(x + 2)",
+        "gets the correct numbers but wrong signs"
+      ],
+      "diagnostic_sentence": "The stuck point is checking that the brackets expand back to the original expression."
+    }
+  ],
+  "accepted_alternative_paths": [],
+  "mark_scheme_notes": "Award 1 mark for identifying -5 and -2; 1 mark for the correct factorised expression.",
+  "examiner_report_notes": "Common errors expected: correct numbers with positive signs, weak negative-number control when checking expansion.",
+  "student_facing_language": "en",
+  "metacognition_prompt": "Before you start, what do the signs of the middle and constant terms tell you?",
+  "transfer_variation_of": "Q-001",
+  "exam_board": "edexcel_igcse_math_a",
+  "syllabus_code": "4MA1",
+  "tier_target": "higher",
+  "paper_codes": [
+    "4MA1/1H",
+    "4MA1/2H"
+  ],
+  "syllabus_refs": [
+    "2.4B"
+  ],
+  "source_style": "edexcel_style_original",
+  "year10_sequence_band": "core_target",
+  "transfer_axis": [
+    "sign_change"
+  ]
+}
